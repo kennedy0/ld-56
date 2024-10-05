@@ -139,6 +139,24 @@
       "frame_number": 7
     }
   },
+  "ant_shadow.0001": {
+    "name": "ant_shadow.0001",
+    "x": 800,
+    "y": 119,
+    "frame_width": 16,
+    "frame_height": 3,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 16,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ant_shadow",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
   "bg.0001": {
     "name": "bg.0001",
     "x": 0,
@@ -199,8 +217,8 @@
   },
   "gun.0003": {
     "name": "gun.0003",
-    "x": 818,
-    "y": 108,
+    "x": 816,
+    "y": 119,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -219,8 +237,8 @@
   },
   "gun.0004": {
     "name": "gun.0004",
-    "x": 823,
-    "y": 108,
+    "x": 821,
+    "y": 119,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -239,8 +257,8 @@
   },
   "gun.0005": {
     "name": "gun.0005",
-    "x": 818,
-    "y": 111,
+    "x": 826,
+    "y": 119,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -279,8 +297,8 @@
   },
   "gun.0007": {
     "name": "gun.0007",
-    "x": 823,
-    "y": 111,
+    "x": 818,
+    "y": 108,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -299,8 +317,8 @@
   },
   "gun.0008": {
     "name": "gun.0008",
-    "x": 818,
-    "y": 114,
+    "x": 823,
+    "y": 108,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -319,8 +337,8 @@
   },
   "gun.0009": {
     "name": "gun.0009",
-    "x": 823,
-    "y": 114,
+    "x": 818,
+    "y": 111,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -515,6 +533,24 @@
       ],
       "duration": 100,
       "frame_number": 9
+    }
+  },
+  "player_shadow.0001": {
+    "name": "player_shadow.0001",
+    "x": 818,
+    "y": 114,
+    "frame_width": 10,
+    "frame_height": 3,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 10,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player_shadow",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
     }
   }
 }

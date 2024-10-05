@@ -11,6 +11,11 @@ class Player(Actor):
         # Sprite
         self.sprite = AnimatedSprite.from_atlas("atlas.png", "player")
         self.sprite.pivot.set_bottom_center()
+
+        self.shadow_sprite = Sprite.from_atlas("atlas.png", "player_shadow")
+        self.shadow_sprite.pivot.set_center()
+        self.shadow_sprite.opacity = 64
+
         self.gun_sprite = Sprite.from_atlas("atlas.png", "gun")
         self.gun_sprite.pivot.set_center_left()
 
@@ -37,6 +42,7 @@ class Player(Actor):
             self.sprite.flip_horizontal = True
 
     def draw(self, camera: Camera) -> None:
+        self.shadow_sprite.draw(camera, self.position())
         self.sprite.draw(camera, self.position())
 
     def debug_draw(self, camera: Camera) -> None:
