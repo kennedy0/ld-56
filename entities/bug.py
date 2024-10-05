@@ -107,9 +107,9 @@ class Bug(Entity):
             if self.move_frame >= frame_threshold:
                 self.move_frame = 0
                 if self.mx:
-                    self.move_x(self.mx)
+                    self.x += self.mx
                 if self.my:
-                    self.move_y(self.my)
+                    self.y += self.my
 
     def zsort(self) -> None:
         self.z = self.y * -1

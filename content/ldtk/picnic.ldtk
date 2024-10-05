@@ -11,7 +11,7 @@
 	"iid": "aea951b0-73f0-11ef-a0a7-1d949d5a67ec",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 6,
+	"nextUid": 7,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -186,6 +186,41 @@
 					"tilesetUid": null
 				}
 			]
+		},
+		{
+			"identifier": "Rock",
+			"uid": 6,
+			"tags": [],
+			"exportToToc": false,
+			"allowOutOfBounds": false,
+			"doc": null,
+			"width": 8,
+			"height": 4,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#262B44",
+			"renderMode": "Ellipse",
+			"showName": true,
+			"tilesetId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"uiTileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0.5,
+			"pivotY": 0.5,
+			"fieldDefs": []
 		}
 	], "tilesets": [], "enums": [], "externalEnums": [], "levelFields": [] },
 	"levels": [
@@ -292,6 +327,105 @@
 							],
 							"__worldX": 10,
 							"__worldY": 4
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [791,3],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "8efaf2b0-73f0-11ef-a0a7-7d6f29701f38",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [791,3],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path2", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path2"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
+									{ "cx": 720, "cy": 39 },
+									{ "cx": 770, "cy": 64 },
+									{ "cx": 759, "cy": 69 },
+									{ "cx": 781, "cy": 80 },
+									{ "cx": 740, "cy": 100 },
+									{ "cx": 750, "cy": 104 },
+									{ "cx": 720, "cy": 119 },
+									{ "cx": 740, "cy": 129 },
+									{ "cx": 670, "cy": 164 },
+									{ "cx": 650, "cy": 154 },
+									{ "cx": 610, "cy": 174 },
+									{ "cx": 600, "cy": 169 },
+									{ "cx": 580, "cy": 179 },
+									{ "cx": 510, "cy": 144 },
+									{ "cx": 460, "cy": 169 }
+								], "__tile": null, "defUid": 4, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["720,39"]
+									},
+									{
+										"id": "V_String",
+										"params": ["770,64"]
+									},
+									{
+										"id": "V_String",
+										"params": ["759,69"]
+									},
+									{
+										"id": "V_String",
+										"params": ["781,80"]
+									},
+									{
+										"id": "V_String",
+										"params": ["740,100"]
+									},
+									{
+										"id": "V_String",
+										"params": ["750,104"]
+									},
+									{
+										"id": "V_String",
+										"params": ["720,119"]
+									},
+									{
+										"id": "V_String",
+										"params": ["740,129"]
+									},
+									{
+										"id": "V_String",
+										"params": ["670,164"]
+									},
+									{
+										"id": "V_String",
+										"params": ["650,154"]
+									},
+									{
+										"id": "V_String",
+										"params": ["610,174"]
+									},
+									{
+										"id": "V_String",
+										"params": ["600,169"]
+									},
+									{
+										"id": "V_String",
+										"params": ["580,179"]
+									},
+									{
+										"id": "V_String",
+										"params": ["510,144"]
+									},
+									{
+										"id": "V_String",
+										"params": ["460,169"]
+									}
+								] }
+							],
+							"__worldX": 791,
+							"__worldY": 3
 						}
 					]
 				}

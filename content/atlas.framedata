@@ -2,7 +2,7 @@
   "ant.0001": {
     "name": "ant.0001",
     "x": 800,
-    "y": 338,
+    "y": 224,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -22,7 +22,7 @@
   "ant.0002": {
     "name": "ant.0002",
     "x": 800,
-    "y": 350,
+    "y": 236,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -42,7 +42,7 @@
   "ant.0003": {
     "name": "ant.0003",
     "x": 800,
-    "y": 362,
+    "y": 248,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -62,7 +62,7 @@
   "ant.0004": {
     "name": "ant.0004",
     "x": 800,
-    "y": 374,
+    "y": 260,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -82,7 +82,7 @@
   "ant.0005": {
     "name": "ant.0005",
     "x": 800,
-    "y": 386,
+    "y": 272,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -102,7 +102,7 @@
   "ant.0006": {
     "name": "ant.0006",
     "x": 800,
-    "y": 322,
+    "y": 178,
     "frame_width": 16,
     "frame_height": 16,
     "offset_x": 0,
@@ -121,8 +121,8 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 0,
-    "y": 400,
+    "x": 800,
+    "y": 284,
     "frame_width": 18,
     "frame_height": 11,
     "offset_x": 2,
@@ -141,8 +141,8 @@
   },
   "ant_shadow.0001": {
     "name": "ant_shadow.0001",
-    "x": 816,
-    "y": 334,
+    "x": 800,
+    "y": 295,
     "frame_width": 16,
     "frame_height": 3,
     "offset_x": 0,
@@ -160,7 +160,7 @@
   "ant_splat.0001": {
     "name": "ant_splat.0001",
     "x": 816,
-    "y": 322,
+    "y": 210,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -196,7 +196,7 @@
   "player.0001": {
     "name": "player.0001",
     "x": 800,
-    "y": 238,
+    "y": 119,
     "frame_width": 22,
     "frame_height": 21,
     "offset_x": 9,
@@ -232,7 +232,7 @@
   "player.0003": {
     "name": "player.0003",
     "x": 800,
-    "y": 100,
+    "y": 50,
     "frame_width": 14,
     "frame_height": 23,
     "offset_x": 13,
@@ -268,7 +268,7 @@
   "player.0005": {
     "name": "player.0005",
     "x": 800,
-    "y": 259,
+    "y": 140,
     "frame_width": 22,
     "frame_height": 21,
     "offset_x": 9,
@@ -286,7 +286,7 @@
   "player.0006": {
     "name": "player.0006",
     "x": 800,
-    "y": 123,
+    "y": 73,
     "frame_width": 26,
     "frame_height": 23,
     "offset_x": 7,
@@ -304,7 +304,7 @@
   "player.0007": {
     "name": "player.0007",
     "x": 814,
-    "y": 100,
+    "y": 50,
     "frame_width": 14,
     "frame_height": 23,
     "offset_x": 13,
@@ -322,7 +322,7 @@
   "player.0008": {
     "name": "player.0008",
     "x": 800,
-    "y": 146,
+    "y": 96,
     "frame_width": 26,
     "frame_height": 23,
     "offset_x": 7,
@@ -337,148 +337,112 @@
       "frame_number": 8
     }
   },
-  "player_shadow.0001": {
-    "name": "player_shadow.0001",
-    "x": 800,
-    "y": 280,
-    "frame_width": 22,
-    "frame_height": 21,
-    "offset_x": 9,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
+  "rock_a.0001": {
+    "name": "rock_a.0001",
+    "x": 816,
+    "y": 178,
+    "frame_width": 16,
+    "frame_height": 16,
+    "offset_x": 1,
+    "offset_y": 2,
+    "sprite_width": 18,
+    "sprite_height": 18,
     "metadata": {
       "source_format": "aseprite",
-      "sprite_name": "player_shadow",
+      "sprite_name": "rock_a",
       "tags": [],
       "duration": 100,
       "frame_number": 1
     }
   },
-  "player_shadow.0002": {
-    "name": "player_shadow.0002",
-    "x": 800,
-    "y": 50,
-    "frame_width": 26,
-    "frame_height": 25,
-    "offset_x": 7,
+  "rock_b.0001": {
+    "name": "rock_b.0001",
+    "x": 816,
+    "y": 194,
+    "frame_width": 16,
+    "frame_height": 14,
+    "offset_x": 1,
     "offset_y": 3,
-    "sprite_width": 40,
-    "sprite_height": 40,
+    "sprite_width": 18,
+    "sprite_height": 18,
     "metadata": {
       "source_format": "aseprite",
-      "sprite_name": "player_shadow",
+      "sprite_name": "rock_b",
       "tags": [],
       "duration": 100,
-      "frame_number": 2
+      "frame_number": 1
     }
   },
-  "player_shadow.0003": {
-    "name": "player_shadow.0003",
+  "rock_c.0001": {
+    "name": "rock_c.0001",
     "x": 800,
-    "y": 169,
-    "frame_width": 14,
-    "frame_height": 23,
-    "offset_x": 13,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
+    "y": 161,
+    "frame_width": 16,
+    "frame_height": 17,
+    "offset_x": 1,
+    "offset_y": 1,
+    "sprite_width": 18,
+    "sprite_height": 18,
     "metadata": {
       "source_format": "aseprite",
-      "sprite_name": "player_shadow",
+      "sprite_name": "rock_c",
       "tags": [],
       "duration": 100,
-      "frame_number": 3
+      "frame_number": 1
     }
   },
-  "player_shadow.0004": {
-    "name": "player_shadow.0004",
+  "rock_d.0001": {
+    "name": "rock_d.0001",
     "x": 800,
-    "y": 75,
-    "frame_width": 26,
-    "frame_height": 25,
-    "offset_x": 7,
+    "y": 194,
+    "frame_width": 16,
+    "frame_height": 16,
+    "offset_x": 1,
+    "offset_y": 2,
+    "sprite_width": 18,
+    "sprite_height": 18,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "rock_d",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "rock_e.0001": {
+    "name": "rock_e.0001",
+    "x": 800,
+    "y": 210,
+    "frame_width": 16,
+    "frame_height": 14,
+    "offset_x": 1,
     "offset_y": 3,
-    "sprite_width": 40,
-    "sprite_height": 40,
+    "sprite_width": 18,
+    "sprite_height": 18,
     "metadata": {
       "source_format": "aseprite",
-      "sprite_name": "player_shadow",
+      "sprite_name": "rock_e",
       "tags": [],
       "duration": 100,
-      "frame_number": 4
+      "frame_number": 1
     }
   },
-  "player_shadow.0005": {
-    "name": "player_shadow.0005",
-    "x": 800,
-    "y": 301,
-    "frame_width": 22,
-    "frame_height": 21,
-    "offset_x": 9,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
+  "rock_f.0001": {
+    "name": "rock_f.0001",
+    "x": 816,
+    "y": 161,
+    "frame_width": 16,
+    "frame_height": 17,
+    "offset_x": 1,
+    "offset_y": 1,
+    "sprite_width": 18,
+    "sprite_height": 18,
     "metadata": {
       "source_format": "aseprite",
-      "sprite_name": "player_shadow",
+      "sprite_name": "rock_f",
       "tags": [],
       "duration": 100,
-      "frame_number": 5
-    }
-  },
-  "player_shadow.0006": {
-    "name": "player_shadow.0006",
-    "x": 800,
-    "y": 192,
-    "frame_width": 26,
-    "frame_height": 23,
-    "offset_x": 7,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player_shadow",
-      "tags": [],
-      "duration": 100,
-      "frame_number": 6
-    }
-  },
-  "player_shadow.0007": {
-    "name": "player_shadow.0007",
-    "x": 814,
-    "y": 169,
-    "frame_width": 14,
-    "frame_height": 23,
-    "offset_x": 13,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player_shadow",
-      "tags": [],
-      "duration": 100,
-      "frame_number": 7
-    }
-  },
-  "player_shadow.0008": {
-    "name": "player_shadow.0008",
-    "x": 800,
-    "y": 215,
-    "frame_width": 26,
-    "frame_height": 23,
-    "offset_x": 7,
-    "offset_y": 5,
-    "sprite_width": 40,
-    "sprite_height": 40,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player_shadow",
-      "tags": [],
-      "duration": 100,
-      "frame_number": 8
+      "frame_number": 1
     }
   }
 }

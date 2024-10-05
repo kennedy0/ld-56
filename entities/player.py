@@ -43,17 +43,50 @@ class Player(Entity):
         self.facing_angle = 0
 
         # Collision
-        self.radius = 6
+        self.collisions_enabled = True
+        self.width = 20
+        self.height = 10
+        self.radius = 10
+
+        self.water_rect = Rect(517, 41, 217, 118)
+        self.water_radius = 32
+        self.water_points = [
+            Point(550, 106),
+            Point(667, 111),
+            Point(593, 128),
+            Point(703, 75),
+            Point(644, 76),
+            Point(580, 111),
+            Point(613, 103),
+            Point(672, 73),
+            Point(628, 117),
+            Point(687, 92),
+            Point(647, 115),
+            Point(610, 124),
+            Point(568, 121),
+            Point(593, 108),
+            Point(566, 112),
+            Point(630, 90),
+            Point(658, 74),
+            Point(690, 73),
+        ]
 
     def start(self) -> None:
         self.game_manager = self.find("GameManager")
+
+        self.x = 400
+        self.y = 200
+
+    def bbox(self) -> Rect:
+        return Rect(self.x - self.width // 2, self.y - self.height // 2, self.width, self.height)
 
     def update(self) -> None:
         self.update_move_input()
         self.update_move_direction()
         self.update_movement()
         self.update_facing_angle()
-        self.handle_collisions()
+        self.handle_bug_collisions()
+        self.handle_water_collision()
         self.update_sprite()
         self.zsort()
 
@@ -88,11 +121,21 @@ class Player(Entity):
         if self.my:
             self.move_y(self.my)
 
-    def handle_collisions(self) -> None:
+        self.x = pmath.clamp(self.x, 0, 800)
+        self.y = pmath.clamp(self.y, 0, 400)
+
+    def handle_bug_collisions(self) -> None:
         for bug in self.game_manager.bugs:
             d = self.position().distance_to(bug.position())
             if d < self.radius + bug.radius:
                 bug.kill()
+
+    def handle_water_collision(self) -> None:
+        player_p = self.position()
+        if self.water_rect.contains_point(player_p):
+            distances = [p.distance_to(player_p) for p in self.water_points]
+            if min(distances) < self.water_radius:
+                print("WATER")
 
     def update_facing_angle(self) -> None:
         self.facing_angle = degrees(atan2(self.move_direction.y, self.move_direction.x))
@@ -128,3 +171,17 @@ class Player(Entity):
 
     def draw(self, camera: Camera) -> None:
         self.sprite.draw(camera, self.position())
+
+    def debug_draw(self, camera: Camera) -> None:
+        self.bbox().draw(camera, Color.white())
+
+    def _check_collision_at(self, x: int, y: int, other: Entity) -> bool:
+        """ Check if this entity, at a given position, will intersect another entity. """
+        if not self.active or not other.active:
+            return False
+
+        if not self.collisions_enabled or not other.collisions_enabled:
+            return False
+
+        bbox = Rect(x - self.width // 2, y - self.height // 2, self.width, self.height)
+        return other.intersects(bbox)

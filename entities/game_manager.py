@@ -31,7 +31,13 @@ class GameManager(Entity):
     def update(self) -> None:
         if Keyboard.get_key_down(Keyboard.NUM_1):
             self.start_wave_1()
+        if Keyboard.get_key_down(Keyboard.NUM_2):
+            self.start_wave_2()
 
     def start_wave_1(self) -> None:
         bugs = ["ant"] * 10
         self.bug_spawner_top_left.spawn(bugs)
+
+    def start_wave_2(self) -> None:
+        bugs = ["ant"] * 10
+        self.bug_spawner_top_right.spawn(bugs)
