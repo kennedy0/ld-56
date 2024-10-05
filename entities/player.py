@@ -48,8 +48,8 @@ class Player(Entity):
         self.height = 10
         self.radius = 10
 
-        self.water_rect = Rect(517, 41, 217, 118)
         self.water_radius = 32
+        self.water_rect = Rect(517, 41, 217, 118)
         self.water_points = [
             Point(550, 106),
             Point(667, 111),
@@ -69,6 +69,27 @@ class Player(Entity):
             Point(630, 90),
             Point(658, 74),
             Point(690, 73),
+        ]
+
+        self.water_rect_2 = Rect(104, 323, 288, 77)
+        self.water_points_2 = [
+            Point(261, 355),
+            Point(124, 424),
+            Point(195, 385),
+            Point(144, 411),
+            Point(179, 394),
+            Point(162, 403),
+            Point(252, 370),
+            Point(221, 383),
+            Point(367, 419),
+            Point(345, 416),
+            Point(279, 374),
+            Point(284, 392),
+            Point(324, 415),
+            Point(292, 393),
+            Point(308, 403),
+            Point(324, 411),
+            Point(244, 370),
         ]
 
     def start(self) -> None:
@@ -132,8 +153,13 @@ class Player(Entity):
 
     def handle_water_collision(self) -> None:
         player_p = self.position()
+
         if self.water_rect.contains_point(player_p):
             distances = [p.distance_to(player_p) for p in self.water_points]
+            if min(distances) < self.water_radius:
+                print("WATER")
+        elif self.water_rect_2.contains_point(player_p):
+            distances = [p.distance_to(player_p) for p in self.water_points_2]
             if min(distances) < self.water_radius:
                 print("WATER")
 

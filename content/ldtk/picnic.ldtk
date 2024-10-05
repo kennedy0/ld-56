@@ -330,7 +330,7 @@
 						},
 						{
 							"__identifier": "Path",
-							"__grid": [791,3],
+							"__grid": [787,5],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": null,
@@ -339,7 +339,7 @@
 							"width": 1,
 							"height": 1,
 							"defUid": 2,
-							"px": [791,3],
+							"px": [787,5],
 							"fieldInstances": [
 								{ "__identifier": "Name", "__type": "String", "__value": "Path2", "__tile": null, "defUid": 5, "realEditorValues": [{
 									"id": "V_String",
@@ -424,8 +424,8 @@
 									}
 								] }
 							],
-							"__worldX": 791,
-							"__worldY": 3
+							"__worldX": 787,
+							"__worldY": 5
 						},
 						{
 							"__identifier": "Rock",
@@ -554,6 +554,771 @@
 							"fieldInstances": [],
 							"__worldX": 166,
 							"__worldY": 12
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [369,315],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e3bccd50-73f0-11ef-a0a7-df983103b42d",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [369,315],
+							"fieldInstances": [],
+							"__worldX": 369,
+							"__worldY": 315
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [391,315],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e4520870-73f0-11ef-a0a7-6fb8ea66edda",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [391,315],
+							"fieldInstances": [],
+							"__worldX": 391,
+							"__worldY": 315
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [380,293],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e66a6120-73f0-11ef-a0a7-c7764945600b",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [380,293],
+							"fieldInstances": [],
+							"__worldX": 380,
+							"__worldY": 293
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [197,250],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "b8302960-73f0-11ef-a0a7-f3463d714bf4",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [197,250],
+							"fieldInstances": [],
+							"__worldX": 197,
+							"__worldY": 250
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [208,238],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "ba103400-73f0-11ef-a0a7-f57f4c157fbe",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [208,238],
+							"fieldInstances": [],
+							"__worldX": 208,
+							"__worldY": 238
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [33,185],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "bf38b2e0-73f0-11ef-a0a7-83a6050a2877",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [33,185],
+							"fieldInstances": [],
+							"__worldX": 33,
+							"__worldY": 185
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [68,171],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "bf9f8b00-73f0-11ef-a0a7-2b25a3ceb073",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [68,171],
+							"fieldInstances": [],
+							"__worldX": 68,
+							"__worldY": 171
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [85,179],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c03e8a20-73f0-11ef-a0a7-239a0b33585a",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [85,179],
+							"fieldInstances": [],
+							"__worldX": 85,
+							"__worldY": 179
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [400,255],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c3377ed0-73f0-11ef-a0a7-4961ba12cc87",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [400,255],
+							"fieldInstances": [],
+							"__worldX": 400,
+							"__worldY": 255
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [509,210],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c47ef2f0-73f0-11ef-a0a7-ef38d32c4e1c",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [509,210],
+							"fieldInstances": [],
+							"__worldX": 509,
+							"__worldY": 210
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [565,188],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c4bb5fb0-73f0-11ef-a0a7-4155debd6119",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [565,188],
+							"fieldInstances": [],
+							"__worldX": 565,
+							"__worldY": 188
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [607,217],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c611a0e0-73f0-11ef-a0a7-83edebd432e4",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [607,217],
+							"fieldInstances": [],
+							"__worldX": 607,
+							"__worldY": 217
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [748,121],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "c97d0670-73f0-11ef-a0a7-81bb59da9c79",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [748,121],
+							"fieldInstances": [],
+							"__worldX": 748,
+							"__worldY": 121
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [775,110],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "ca1d1700-73f0-11ef-a0a7-9d696fad2e3e",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [775,110],
+							"fieldInstances": [],
+							"__worldX": 775,
+							"__worldY": 110
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [780,140],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "cae57010-73f0-11ef-a0a7-b179971c92df",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [780,140],
+							"fieldInstances": [],
+							"__worldX": 780,
+							"__worldY": 140
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [575,323],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "d41fcdb0-73f0-11ef-a0a7-7d53515ac2f8",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [575,323],
+							"fieldInstances": [],
+							"__worldX": 575,
+							"__worldY": 323
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [625,331],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "d4826010-73f0-11ef-a0a7-b5dbcb28ea3f",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [625,331],
+							"fieldInstances": [],
+							"__worldX": 625,
+							"__worldY": 331
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [744,349],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "d9aadef0-73f0-11ef-a0a7-2d866479c572",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [744,349],
+							"fieldInstances": [],
+							"__worldX": 744,
+							"__worldY": 349
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [689,304],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "dded6aa0-73f0-11ef-a0a7-7dbe96e58748",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [689,304],
+							"fieldInstances": [],
+							"__worldX": 689,
+							"__worldY": 304
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [552,302],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "deb3a0d0-73f0-11ef-a0a7-91aa8475be09",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [552,302],
+							"fieldInstances": [],
+							"__worldX": 552,
+							"__worldY": 302
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [728,388],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "df965fb0-73f0-11ef-a0a7-9ffa2daba5e3",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [728,388],
+							"fieldInstances": [],
+							"__worldX": 728,
+							"__worldY": 388
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [729,326],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e072dd00-73f0-11ef-a0a7-79a0f881a318",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [729,326],
+							"fieldInstances": [],
+							"__worldX": 729,
+							"__worldY": 326
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [604,273],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e157bec0-73f0-11ef-a0a7-13d44ae1a9d3",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [604,273],
+							"fieldInstances": [],
+							"__worldX": 604,
+							"__worldY": 273
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [684,238],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e1f38990-73f0-11ef-a0a7-7957ecbff29b",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [684,238],
+							"fieldInstances": [],
+							"__worldX": 684,
+							"__worldY": 238
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [627,272],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e2354d80-73f0-11ef-a0a7-fff53e307939",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [627,272],
+							"fieldInstances": [],
+							"__worldX": 627,
+							"__worldY": 272
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [654,262],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "e272cbb0-73f0-11ef-a0a7-dd1ef530c74e",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [654,262],
+							"fieldInstances": [],
+							"__worldX": 654,
+							"__worldY": 262
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [634,388],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "fbf98650-73f0-11ef-a0a7-6767cb15c0a2",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [634,388],
+							"fieldInstances": [],
+							"__worldX": 634,
+							"__worldY": 388
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [664,363],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "fce80500-73f0-11ef-a0a7-03b0d1f5fb25",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [664,363],
+							"fieldInstances": [],
+							"__worldX": 664,
+							"__worldY": 363
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [469,260],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "fe0eaab0-73f0-11ef-a0a7-07f8bdd1e5c3",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [469,260],
+							"fieldInstances": [],
+							"__worldX": 469,
+							"__worldY": 260
+						},
+						{
+							"__identifier": "Rock",
+							"__grid": [682,206],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#262B44",
+							"iid": "017b21b0-73f0-11ef-a0a7-0beae69e8b16",
+							"width": 8,
+							"height": 4,
+							"defUid": 6,
+							"px": [682,206],
+							"fieldInstances": [],
+							"__worldX": 682,
+							"__worldY": 206
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [7,387],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "3ecaa090-73f0-11ef-a0a7-07d1dad1100d",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [7,387],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path4", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path4"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
+									{ "cx": 61, "cy": 369 },
+									{ "cx": 21, "cy": 349 },
+									{ "cx": 160, "cy": 279 },
+									{ "cx": 110, "cy": 254 },
+									{ "cx": 190, "cy": 214 },
+									{ "cx": 150, "cy": 194 },
+									{ "cx": 270, "cy": 134 },
+									{ "cx": 341, "cy": 170 }
+								], "__tile": null, "defUid": 4, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["61,369"]
+									},
+									{
+										"id": "V_String",
+										"params": ["21,349"]
+									},
+									{
+										"id": "V_String",
+										"params": ["160,279"]
+									},
+									{
+										"id": "V_String",
+										"params": ["110,254"]
+									},
+									{
+										"id": "V_String",
+										"params": ["190,214"]
+									},
+									{
+										"id": "V_String",
+										"params": ["150,194"]
+									},
+									{
+										"id": "V_String",
+										"params": ["270,134"]
+									},
+									{
+										"id": "V_String",
+										"params": ["341,170"]
+									}
+								] }
+							],
+							"__worldX": 7,
+							"__worldY": 387
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [12,392],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "83007af0-73f0-11ef-a0a7-392e44e24737",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [12,392],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path5", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path5"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
+									{ "cx": 59, "cy": 369 },
+									{ "cx": 100, "cy": 389 },
+									{ "cx": 260, "cy": 309 },
+									{ "cx": 290, "cy": 324 },
+									{ "cx": 470, "cy": 234 },
+									{ "cx": 460, "cy": 229 }
+								], "__tile": null, "defUid": 4, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["59,369"]
+									},
+									{
+										"id": "V_String",
+										"params": ["100,389"]
+									},
+									{
+										"id": "V_String",
+										"params": ["260,309"]
+									},
+									{
+										"id": "V_String",
+										"params": ["290,324"]
+									},
+									{
+										"id": "V_String",
+										"params": ["470,234"]
+									},
+									{
+										"id": "V_String",
+										"params": ["460,229"]
+									}
+								] }
+							],
+							"__worldX": 12,
+							"__worldY": 392
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [20,395],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "a889daf0-73f0-11ef-a0a7-8da4c81847f0",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [20,395],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path6", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path6"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
+									{ "cx": 72, "cy": 377 },
+									{ "cx": 114, "cy": 397 },
+									{ "cx": 274, "cy": 316 },
+									{ "cx": 373, "cy": 367 },
+									{ "cx": 483, "cy": 312 },
+									{ "cx": 343, "cy": 242 },
+									{ "cx": 354, "cy": 237 }
+								], "__tile": null, "defUid": 4, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["72,377"]
+									},
+									{
+										"id": "V_String",
+										"params": ["114,397"]
+									},
+									{
+										"id": "V_String",
+										"params": ["274,316"]
+									},
+									{
+										"id": "V_String",
+										"params": ["373,367"]
+									},
+									{
+										"id": "V_String",
+										"params": ["483,312"]
+									},
+									{
+										"id": "V_String",
+										"params": ["343,242"]
+									},
+									{
+										"id": "V_String",
+										"params": ["354,237"]
+									}
+								] }
+							],
+							"__worldX": 20,
+							"__worldY": 395
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [770,395],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "e2f1a330-73f0-11ef-a0a7-2ddbb2839015",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [770,395],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path7", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path7"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [{ "cx": 461, "cy": 229 }], "__tile": null, "defUid": 4, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["461,229"]
+								}] }
+							],
+							"__worldX": 770,
+							"__worldY": 395
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [778,389],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "f9f31280-73f0-11ef-a0a7-0d7cf075ca06",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [778,389],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path8", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path8"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [ { "cx": 470, "cy": 233 }, { "cx": 400, "cy": 269 }, { "cx": 330, "cy": 234 }, { "cx": 342, "cy": 228 } ], "__tile": null, "defUid": 4, "realEditorValues": [ {
+									"id": "V_String",
+									"params": ["470,233"]
+								}, {
+									"id": "V_String",
+									"params": ["400,269"]
+								}, {
+									"id": "V_String",
+									"params": ["330,234"]
+								}, {
+									"id": "V_String",
+									"params": ["342,228"]
+								} ] }
+							],
+							"__worldX": 778,
+							"__worldY": 389
+						},
+						{
+							"__identifier": "Path",
+							"__grid": [788,382],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#FF0044",
+							"iid": "122d28e0-73f0-11ef-a0a7-c1547bb3273f",
+							"width": 1,
+							"height": 1,
+							"defUid": 2,
+							"px": [788,382],
+							"fieldInstances": [
+								{ "__identifier": "Name", "__type": "String", "__value": "Path9", "__tile": null, "defUid": 5, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Path9"]
+								}] },
+								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
+									{ "cx": 550, "cy": 274 },
+									{ "cx": 660, "cy": 219 },
+									{ "cx": 580, "cy": 179 },
+									{ "cx": 510, "cy": 145 },
+									{ "cx": 460, "cy": 169 }
+								], "__tile": null, "defUid": 4, "realEditorValues": [
+									{
+										"id": "V_String",
+										"params": ["550,274"]
+									},
+									{
+										"id": "V_String",
+										"params": ["660,219"]
+									},
+									{
+										"id": "V_String",
+										"params": ["580,179"]
+									},
+									{
+										"id": "V_String",
+										"params": ["510,145"]
+									},
+									{
+										"id": "V_String",
+										"params": ["460,169"]
+									}
+								] }
+							],
+							"__worldX": 788,
+							"__worldY": 382
 						}
 					]
 				}

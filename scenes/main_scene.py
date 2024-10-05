@@ -66,6 +66,7 @@ class MainScene(Scene):
                         x = waypoint['cx']
                         y = waypoint['cy']
                         spawner_match.waypoints.append(Point(x, y))
+                ldtk_entity.destroy()
 
             elif ldtk_entity.name.startswith("Rock-"):
                 LDtk.swap_entity(ldtk_entity, Rock())
