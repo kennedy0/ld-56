@@ -15,7 +15,7 @@ class Bug(Entity):
 
         # Movement
         self.move_frame = 0
-        self.move_speed = 5
+        self.move_speed = 1
         self.move_target: Point | None = None
         self.stop_at_distance_to_target = 4
         self.mx = 0
@@ -25,6 +25,7 @@ class Bug(Entity):
         super().update()
         self.update_move_target()
         self.update_movement()
+        self.zsort()
         self.update_animation()
 
     def update_move_target(self) -> None:
@@ -45,10 +46,10 @@ class Bug(Entity):
             # Snap movement to 8 directions
             self.mx = 0
             self.my = 0
-            dx, dy = self.move_target - self.position()
+            dx, dy = delta
             if dx:
                 self.mx = pmath.sign(dx)
-                if abs(delta.x) > 1:
+                if abs(dx) > 1:
                     self.mx *= 2
             if dy:
                 self.my = pmath.sign(dy)
@@ -80,6 +81,9 @@ class Bug(Entity):
                     self.move_x(self.mx)
                 if self.my:
                     self.move_y(self.my)
+
+    def zsort(self) -> None:
+        self.z = self.y * -1
 
     def update_animation(self) -> None:
         self.sprite.update()

@@ -2,7 +2,7 @@
   "ant.0001": {
     "name": "ant.0001",
     "x": 800,
-    "y": 16,
+    "y": 177,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -22,7 +22,7 @@
   "ant.0002": {
     "name": "ant.0002",
     "x": 800,
-    "y": 28,
+    "y": 189,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -42,7 +42,7 @@
   "ant.0003": {
     "name": "ant.0003",
     "x": 800,
-    "y": 40,
+    "y": 201,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -62,7 +62,7 @@
   "ant.0004": {
     "name": "ant.0004",
     "x": 800,
-    "y": 52,
+    "y": 213,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -82,7 +82,7 @@
   "ant.0005": {
     "name": "ant.0005",
     "x": 800,
-    "y": 64,
+    "y": 225,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -102,7 +102,7 @@
   "ant.0006": {
     "name": "ant.0006",
     "x": 800,
-    "y": 0,
+    "y": 161,
     "frame_width": 16,
     "frame_height": 16,
     "offset_x": 0,
@@ -122,7 +122,7 @@
   "ant.0007": {
     "name": "ant.0007",
     "x": 800,
-    "y": 76,
+    "y": 237,
     "frame_width": 18,
     "frame_height": 11,
     "offset_x": 2,
@@ -142,7 +142,7 @@
   "ant_shadow.0001": {
     "name": "ant_shadow.0001",
     "x": 816,
-    "y": 0,
+    "y": 161,
     "frame_width": 16,
     "frame_height": 3,
     "offset_x": 0,
@@ -177,8 +177,8 @@
   },
   "gun.0001": {
     "name": "gun.0001",
-    "x": 818,
-    "y": 76,
+    "x": 826,
+    "y": 73,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -197,8 +197,8 @@
   },
   "gun.0002": {
     "name": "gun.0002",
-    "x": 823,
-    "y": 76,
+    "x": 826,
+    "y": 77,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -217,8 +217,8 @@
   },
   "gun.0003": {
     "name": "gun.0003",
-    "x": 823,
-    "y": 80,
+    "x": 826,
+    "y": 85,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -237,8 +237,8 @@
   },
   "gun.0004": {
     "name": "gun.0004",
-    "x": 818,
-    "y": 84,
+    "x": 826,
+    "y": 88,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -257,8 +257,8 @@
   },
   "gun.0005": {
     "name": "gun.0005",
-    "x": 823,
-    "y": 84,
+    "x": 826,
+    "y": 91,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -277,8 +277,8 @@
   },
   "gun.0006": {
     "name": "gun.0006",
-    "x": 818,
-    "y": 80,
+    "x": 826,
+    "y": 81,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -297,8 +297,8 @@
   },
   "gun.0007": {
     "name": "gun.0007",
-    "x": 818,
-    "y": 16,
+    "x": 826,
+    "y": 96,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -317,8 +317,8 @@
   },
   "gun.0008": {
     "name": "gun.0008",
-    "x": 823,
-    "y": 16,
+    "x": 826,
+    "y": 99,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -337,8 +337,8 @@
   },
   "gun.0009": {
     "name": "gun.0009",
-    "x": 818,
-    "y": 19,
+    "x": 826,
+    "y": 102,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -353,6 +353,150 @@
       ],
       "duration": 100,
       "frame_number": 9
+    }
+  },
+  "player.0001": {
+    "name": "player.0001",
+    "x": 800,
+    "y": 119,
+    "frame_width": 22,
+    "frame_height": 21,
+    "offset_x": 9,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "player.0002": {
+    "name": "player.0002",
+    "x": 800,
+    "y": 0,
+    "frame_width": 26,
+    "frame_height": 25,
+    "offset_x": 7,
+    "offset_y": 3,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "player.0003": {
+    "name": "player.0003",
+    "x": 800,
+    "y": 50,
+    "frame_width": 14,
+    "frame_height": 23,
+    "offset_x": 13,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "player.0004": {
+    "name": "player.0004",
+    "x": 800,
+    "y": 25,
+    "frame_width": 26,
+    "frame_height": 25,
+    "offset_x": 7,
+    "offset_y": 3,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "player.0005": {
+    "name": "player.0005",
+    "x": 800,
+    "y": 140,
+    "frame_width": 22,
+    "frame_height": 21,
+    "offset_x": 9,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "player.0006": {
+    "name": "player.0006",
+    "x": 800,
+    "y": 73,
+    "frame_width": 26,
+    "frame_height": 23,
+    "offset_x": 7,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 6
+    }
+  },
+  "player.0007": {
+    "name": "player.0007",
+    "x": 814,
+    "y": 50,
+    "frame_width": 14,
+    "frame_height": 23,
+    "offset_x": 13,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 7
+    }
+  },
+  "player.0008": {
+    "name": "player.0008",
+    "x": 800,
+    "y": 96,
+    "frame_width": 26,
+    "frame_height": 23,
+    "offset_x": 7,
+    "offset_y": 5,
+    "sprite_width": 40,
+    "sprite_height": 40,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 8
     }
   }
 }
