@@ -129,6 +129,96 @@
 					"Name": "Path2"
 				}
 			}
+		],
+		"Rock": [
+			{
+				"id": "Rock",
+				"iid": "37001d10-73f0-11ef-a0a7-b1e202b48b44",
+				"layer": "Entities",
+				"x": 178,
+				"y": 119,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "38e16030-73f0-11ef-a0a7-f990df07e023",
+				"layer": "Entities",
+				"x": 192,
+				"y": 110,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "39716b30-73f0-11ef-a0a7-957416a27e35",
+				"layer": "Entities",
+				"x": 196,
+				"y": 121,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "4d2d9a90-73f0-11ef-a0a7-8944cf5ffa6f",
+				"layer": "Entities",
+				"x": 204,
+				"y": 70,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "4faca450-73f0-11ef-a0a7-07073edd8d44",
+				"layer": "Entities",
+				"x": 125,
+				"y": 21,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "5083ca70-73f0-11ef-a0a7-5dd8790a5b8b",
+				"layer": "Entities",
+				"x": 150,
+				"y": 12,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "510d93e0-73f0-11ef-a0a7-5723dea61274",
+				"layer": "Entities",
+				"x": 180,
+				"y": 20,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			},
+			{
+				"id": "Rock",
+				"iid": "52005850-73f0-11ef-a0a7-db31e298f31f",
+				"layer": "Entities",
+				"x": 166,
+				"y": 12,
+				"width": 8,
+				"height": 4,
+				"color": 2501444,
+				"customFields" : {}
+			}
 		]
 	}
 }
