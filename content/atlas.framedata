@@ -1,1 +1,362 @@
-{}
+{
+  "gun.0001": {
+    "name": "gun.0001",
+    "x": 56,
+    "y": 0,
+    "frame_width": 5,
+    "frame_height": 4,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Idle"
+      ],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "gun.0002": {
+    "name": "gun.0002",
+    "x": 56,
+    "y": 4,
+    "frame_width": 5,
+    "frame_height": 4,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "gun.0003": {
+    "name": "gun.0003",
+    "x": 56,
+    "y": 12,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 1,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "gun.0004": {
+    "name": "gun.0004",
+    "x": 28,
+    "y": 16,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "gun.0005": {
+    "name": "gun.0005",
+    "x": 33,
+    "y": 16,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "gun.0006": {
+    "name": "gun.0006",
+    "x": 56,
+    "y": 8,
+    "frame_width": 5,
+    "frame_height": 4,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 6
+    }
+  },
+  "gun.0007": {
+    "name": "gun.0007",
+    "x": 38,
+    "y": 16,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 1,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 7
+    }
+  },
+  "gun.0008": {
+    "name": "gun.0008",
+    "x": 43,
+    "y": 16,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 8
+    }
+  },
+  "gun.0009": {
+    "name": "gun.0009",
+    "x": 48,
+    "y": 16,
+    "frame_width": 5,
+    "frame_height": 3,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 7,
+    "sprite_height": 4,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "gun",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 9
+    }
+  },
+  "player.0001": {
+    "name": "player.0001",
+    "x": 16,
+    "y": 0,
+    "frame_width": 8,
+    "frame_height": 15,
+    "offset_x": 4,
+    "offset_y": 1,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Idle"
+      ],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "player.0002": {
+    "name": "player.0002",
+    "x": 24,
+    "y": 0,
+    "frame_width": 11,
+    "frame_height": 15,
+    "offset_x": 2,
+    "offset_y": 1,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "player.0003": {
+    "name": "player.0003",
+    "x": 10,
+    "y": 16,
+    "frame_width": 9,
+    "frame_height": 14,
+    "offset_x": 3,
+    "offset_y": 2,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "player.0004": {
+    "name": "player.0004",
+    "x": 0,
+    "y": 0,
+    "frame_width": 8,
+    "frame_height": 16,
+    "offset_x": 4,
+    "offset_y": 0,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "player.0005": {
+    "name": "player.0005",
+    "x": 35,
+    "y": 0,
+    "frame_width": 10,
+    "frame_height": 15,
+    "offset_x": 3,
+    "offset_y": 0,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "player.0006": {
+    "name": "player.0006",
+    "x": 45,
+    "y": 0,
+    "frame_width": 11,
+    "frame_height": 15,
+    "offset_x": 2,
+    "offset_y": 1,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 6
+    }
+  },
+  "player.0007": {
+    "name": "player.0007",
+    "x": 19,
+    "y": 16,
+    "frame_width": 9,
+    "frame_height": 14,
+    "offset_x": 3,
+    "offset_y": 2,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 7
+    }
+  },
+  "player.0008": {
+    "name": "player.0008",
+    "x": 8,
+    "y": 0,
+    "frame_width": 8,
+    "frame_height": 16,
+    "offset_x": 4,
+    "offset_y": 0,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 8
+    }
+  },
+  "player.0009": {
+    "name": "player.0009",
+    "x": 0,
+    "y": 16,
+    "frame_width": 10,
+    "frame_height": 15,
+    "offset_x": 3,
+    "offset_y": 0,
+    "sprite_width": 16,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "player",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 9
+    }
+  }
+}
