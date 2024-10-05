@@ -1,8 +1,8 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 809,
-    "y": 46,
+    "x": 800,
+    "y": 16,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -22,7 +22,7 @@
   "ant.0002": {
     "name": "ant.0002",
     "x": 800,
-    "y": 60,
+    "y": 28,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -42,7 +42,7 @@
   "ant.0003": {
     "name": "ant.0003",
     "x": 800,
-    "y": 72,
+    "y": 40,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -62,7 +62,7 @@
   "ant.0004": {
     "name": "ant.0004",
     "x": 800,
-    "y": 84,
+    "y": 52,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -82,7 +82,7 @@
   "ant.0005": {
     "name": "ant.0005",
     "x": 800,
-    "y": 96,
+    "y": 64,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -122,7 +122,7 @@
   "ant.0007": {
     "name": "ant.0007",
     "x": 800,
-    "y": 108,
+    "y": 76,
     "frame_width": 18,
     "frame_height": 11,
     "offset_x": 2,
@@ -141,8 +141,8 @@
   },
   "ant_shadow.0001": {
     "name": "ant_shadow.0001",
-    "x": 800,
-    "y": 119,
+    "x": 816,
+    "y": 0,
     "frame_width": 16,
     "frame_height": 3,
     "offset_x": 0,
@@ -177,8 +177,8 @@
   },
   "gun.0001": {
     "name": "gun.0001",
-    "x": 827,
-    "y": 46,
+    "x": 818,
+    "y": 76,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -197,8 +197,8 @@
   },
   "gun.0002": {
     "name": "gun.0002",
-    "x": 827,
-    "y": 50,
+    "x": 823,
+    "y": 76,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -217,8 +217,8 @@
   },
   "gun.0003": {
     "name": "gun.0003",
-    "x": 816,
-    "y": 119,
+    "x": 823,
+    "y": 80,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -237,8 +237,8 @@
   },
   "gun.0004": {
     "name": "gun.0004",
-    "x": 821,
-    "y": 119,
+    "x": 818,
+    "y": 84,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -257,8 +257,8 @@
   },
   "gun.0005": {
     "name": "gun.0005",
-    "x": 826,
-    "y": 119,
+    "x": 823,
+    "y": 84,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -277,8 +277,8 @@
   },
   "gun.0006": {
     "name": "gun.0006",
-    "x": 827,
-    "y": 54,
+    "x": 818,
+    "y": 80,
     "frame_width": 5,
     "frame_height": 4,
     "offset_x": 2,
@@ -298,7 +298,7 @@
   "gun.0007": {
     "name": "gun.0007",
     "x": 818,
-    "y": 108,
+    "y": 16,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -318,7 +318,7 @@
   "gun.0008": {
     "name": "gun.0008",
     "x": 823,
-    "y": 108,
+    "y": 16,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -338,7 +338,7 @@
   "gun.0009": {
     "name": "gun.0009",
     "x": 818,
-    "y": 111,
+    "y": 19,
     "frame_width": 5,
     "frame_height": 3,
     "offset_x": 2,
@@ -353,204 +353,6 @@
       ],
       "duration": 100,
       "frame_number": 9
-    }
-  },
-  "player.0001": {
-    "name": "player.0001",
-    "x": 800,
-    "y": 16,
-    "frame_width": 8,
-    "frame_height": 15,
-    "offset_x": 4,
-    "offset_y": 1,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Idle"
-      ],
-      "duration": 100,
-      "frame_number": 1
-    }
-  },
-  "player.0002": {
-    "name": "player.0002",
-    "x": 808,
-    "y": 16,
-    "frame_width": 11,
-    "frame_height": 15,
-    "offset_x": 2,
-    "offset_y": 1,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 2
-    }
-  },
-  "player.0003": {
-    "name": "player.0003",
-    "x": 821,
-    "y": 31,
-    "frame_width": 9,
-    "frame_height": 14,
-    "offset_x": 3,
-    "offset_y": 2,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 3
-    }
-  },
-  "player.0004": {
-    "name": "player.0004",
-    "x": 816,
-    "y": 0,
-    "frame_width": 8,
-    "frame_height": 16,
-    "offset_x": 4,
-    "offset_y": 0,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 4
-    }
-  },
-  "player.0005": {
-    "name": "player.0005",
-    "x": 819,
-    "y": 16,
-    "frame_width": 10,
-    "frame_height": 15,
-    "offset_x": 3,
-    "offset_y": 0,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 5
-    }
-  },
-  "player.0006": {
-    "name": "player.0006",
-    "x": 800,
-    "y": 31,
-    "frame_width": 11,
-    "frame_height": 15,
-    "offset_x": 2,
-    "offset_y": 1,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 6
-    }
-  },
-  "player.0007": {
-    "name": "player.0007",
-    "x": 800,
-    "y": 46,
-    "frame_width": 9,
-    "frame_height": 14,
-    "offset_x": 3,
-    "offset_y": 2,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 7
-    }
-  },
-  "player.0008": {
-    "name": "player.0008",
-    "x": 824,
-    "y": 0,
-    "frame_width": 8,
-    "frame_height": 16,
-    "offset_x": 4,
-    "offset_y": 0,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 8
-    }
-  },
-  "player.0009": {
-    "name": "player.0009",
-    "x": 811,
-    "y": 31,
-    "frame_width": 10,
-    "frame_height": 15,
-    "offset_x": 3,
-    "offset_y": 0,
-    "sprite_width": 16,
-    "sprite_height": 16,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player",
-      "tags": [
-        "Run"
-      ],
-      "duration": 100,
-      "frame_number": 9
-    }
-  },
-  "player_shadow.0001": {
-    "name": "player_shadow.0001",
-    "x": 818,
-    "y": 114,
-    "frame_width": 10,
-    "frame_height": 3,
-    "offset_x": 0,
-    "offset_y": 0,
-    "sprite_width": 10,
-    "sprite_height": 4,
-    "metadata": {
-      "source_format": "aseprite",
-      "sprite_name": "player_shadow",
-      "tags": [],
-      "duration": 100,
-      "frame_number": 1
     }
   }
 }

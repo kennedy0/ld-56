@@ -11,6 +11,10 @@ class MainScene(Scene):
         self.main_camera.y -= self.main_camera.resolution[1] / 2
 
     def load_entities(self) -> None:
+        LDtk.load_simplified(self, "ldtk/picnic.ldtk")
+        for ldtk_entity in LDtk.ldtk_entities(self):
+            print(ldtk_entity)
+
         self.entities.add(Bg())
         self.entities.add(Player())
 
