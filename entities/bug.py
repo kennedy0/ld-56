@@ -1,18 +1,15 @@
 from potion import *
 
-
 from entities.actor import Actor
 
 
-class Player(Actor):
+class Bug(Actor):
     def __init__(self) -> None:
         super().__init__()
 
         # Sprite
-        self.sprite = AnimatedSprite.from_atlas("atlas.png", "player")
+        self.sprite = AnimatedSprite.from_atlas("atlas.png", "ant")
         self.sprite.pivot.set_bottom_center()
-        self.gun_sprite = Sprite.from_atlas("atlas.png", "gun")
-        self.gun_sprite.pivot.set_center_left()
 
     def update(self) -> None:
         super().update()
@@ -20,7 +17,7 @@ class Player(Actor):
         self.update_animation()
 
     def update_move_target(self) -> None:
-        if Mouse.get_left_mouse_down():
+        if Mouse.get_right_mouse_down():
             self.set_move_target(Mouse.world_position())
 
     def update_animation(self) -> None:
