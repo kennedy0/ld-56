@@ -1,17 +1,23 @@
+from __future__ import annotations
+
+import random
+
+from entities.game_manager import GameManager
 from potion import *
+
+from entities.ant_splat import AntSplat
 
 
 class Bug(Entity):
     def __init__(self) -> None:
         super().__init__()
 
-        # Sprite
-        self.sprite = AnimatedSprite.from_atlas("atlas.png", "ant")
-        self.sprite.pivot.set_bottom_center()
+        # Entity references
+        self.game_manager: GameManager | None = None
 
-        self.shadow_sprite = Sprite.from_atlas("atlas.png", "ant_shadow")
-        self.shadow_sprite.pivot.set_center()
-        self.shadow_sprite.opacity = 64
+        # Sprite
+        self.sprite = AnimatedSprite.empty()
+        self.shadow_sprite = Sprite.empty()
 
         # Movement
         self.move_frame = 0
@@ -21,6 +27,16 @@ class Bug(Entity):
         self.mx = 0
         self.my = 0
 
+        # Pathfinding
+        self.waypoints: list[Point] = []
+
+        # Collision
+        self.radius = 6
+
+    def start(self) -> None:
+        self.game_manager = self.find("GameManager")
+        self.game_manager.bugs.append(self)
+
     def update(self) -> None:
         super().update()
         self.update_move_target()
@@ -29,8 +45,21 @@ class Bug(Entity):
         self.update_animation()
 
     def update_move_target(self) -> None:
-        if Mouse.get_right_mouse_down():
-            self.move_target = Mouse.world_position()
+        if not self.move_target:
+            # Move to the next waypoint
+            if self.waypoints:
+                self.move_target = self.waypoints.pop(0)
+
+            # Don't stand right on top of another bug
+            else:
+                for other_bug in self.game_manager.bugs:
+                    if other_bug == self:
+                        continue
+                    distance = other_bug.position().distance_to(self.position())
+                    if distance < self.radius + other_bug.radius:
+                        x = self.x + random.randint(-20, 20)
+                        y = self.y + random.randint(-10, 10)
+                        self.move_target = Point(x, y)
 
     def update_movement(self) -> None:
         if self.move_target:
@@ -98,6 +127,14 @@ class Bug(Entity):
         elif self.mx < 0:
             self.sprite.flip_horizontal = True
 
+    def kill(self) -> None:
+        self.game_manager.bugs.remove(self)
+        self.destroy()
+
+        ant_splat = AntSplat()
+        ant_splat.set_position(self.position())
+        self.scene.entities.add(ant_splat)
+
     def draw(self, camera: Camera) -> None:
         self.shadow_sprite.draw(camera, self.position())
         self.sprite.draw(camera, self.position())
@@ -108,4 +145,3 @@ class Bug(Entity):
             Line(self.position(), self.move_target).draw(camera, Color.blue())
             self.move_target.draw(camera, Color.red())
         self.position().draw(camera, Color.red())
-

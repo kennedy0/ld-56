@@ -9,5 +9,51 @@
 	"neighbourLevels": [],
 	"customFields" : {},
 	"layers": [],
-	"entities" : {}
+	"entities": {
+		"Path": [
+			{
+				"id": "Path",
+				"iid": "9b318c40-73f0-11ef-a0a7-43f1177d3b23",
+				"layer": "Entities",
+				"x": 10,
+				"y": 4,
+				"width": 1,
+				"height": 1,
+				"color": 16711748,
+				"customFields": {
+					"Waypoints": [
+						{
+							"cx": 100,
+							"cy": 48
+						},
+						{
+							"cx": 150,
+							"cy": 24
+						},
+						{
+							"cx": 240,
+							"cy": 69
+						},
+						{
+							"cx": 140,
+							"cy": 119
+						},
+						{
+							"cx": 220,
+							"cy": 159
+						},
+						{
+							"cx": 270,
+							"cy": 134
+						},
+						{
+							"cx": 340,
+							"cy": 169
+						}
+					],
+					"Name": "Path1"
+				}
+			}
+		]
+	}
 }

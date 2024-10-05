@@ -1,12 +1,20 @@
+from __future__ import annotations
+
 from math import atan2, degrees
 
 from potion import *
+
+if TYPE_CHECKING:
+    from entities.game_manager import GameManager
 
 
 class Player(Entity):
     def __init__(self) -> None:
         super().__init__()
         self.name = "Player"
+
+        # Entity references
+        self.game_manager: GameManager | None = None
 
         # Sprite
         self.sprite = Sprite.empty()
@@ -34,11 +42,18 @@ class Player(Entity):
         self.my = 0
         self.facing_angle = 0
 
+        # Collision
+        self.radius = 6
+
+    def start(self) -> None:
+        self.game_manager = self.find("GameManager")
+
     def update(self) -> None:
         self.update_move_input()
         self.update_move_direction()
         self.update_movement()
         self.update_facing_angle()
+        self.handle_collisions()
         self.update_sprite()
         self.zsort()
 
@@ -72,6 +87,12 @@ class Player(Entity):
             self.move_x(self.mx)
         if self.my:
             self.move_y(self.my)
+
+    def handle_collisions(self) -> None:
+        for bug in self.game_manager.bugs:
+            d = self.position().distance_to(bug.position())
+            if d < self.radius + bug.radius:
+                bug.kill()
 
     def update_facing_angle(self) -> None:
         self.facing_angle = degrees(atan2(self.move_direction.y, self.move_direction.x))
