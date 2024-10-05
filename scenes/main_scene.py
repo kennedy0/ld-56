@@ -2,6 +2,7 @@ from potion import *
 
 from entities.bg import Bg
 from entities.bug import Bug
+from entities.camera_controller import CameraController
 from entities.player import Player
 
 
@@ -15,6 +16,7 @@ class MainScene(Scene):
         for ldtk_entity in LDtk.ldtk_entities(self):
             print(ldtk_entity)
 
+        self.entities.add(CameraController())
         self.entities.add(Bg())
         self.entities.add(Player())
 
