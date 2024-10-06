@@ -11,7 +11,7 @@ icon = project_root / "icon.png"
 builds = project_root / "builds"
 
 
-app_name = "LD56"
+app_name = "LD56 - Bug-Bash Buggy"
 script_file = project_root / "main.py"
 content_root = project_root / "content"
 

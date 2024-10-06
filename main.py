@@ -9,7 +9,7 @@ from scenes.start_screen import StartScreen
 
 def main() -> int:
     # Init engine
-    Game.init(name="LD56", version="v1")
+    Game.init(name="LD56 - Bug-Bash Buggy", version="v1")
     Engine.init_default()
     Window.init_default()
     Renderer.init_default()
