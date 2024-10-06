@@ -1,7 +1,7 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 490,
+    "x": 502,
     "y": 440,
     "frame_width": 18,
     "frame_height": 12,
@@ -21,7 +21,7 @@
   },
   "ant.0002": {
     "name": "ant.0002",
-    "x": 508,
+    "x": 520,
     "y": 440,
     "frame_width": 18,
     "frame_height": 12,
@@ -41,7 +41,7 @@
   },
   "ant.0003": {
     "name": "ant.0003",
-    "x": 526,
+    "x": 538,
     "y": 440,
     "frame_width": 18,
     "frame_height": 12,
@@ -61,7 +61,7 @@
   },
   "ant.0004": {
     "name": "ant.0004",
-    "x": 544,
+    "x": 556,
     "y": 440,
     "frame_width": 18,
     "frame_height": 12,
@@ -81,7 +81,7 @@
   },
   "ant.0005": {
     "name": "ant.0005",
-    "x": 562,
+    "x": 574,
     "y": 440,
     "frame_width": 18,
     "frame_height": 12,
@@ -159,7 +159,7 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 580,
+    "x": 592,
     "y": 440,
     "frame_width": 16,
     "frame_height": 12,
@@ -357,7 +357,7 @@
   },
   "apple_ui.0001": {
     "name": "apple_ui.0001",
-    "x": 596,
+    "x": 608,
     "y": 440,
     "frame_width": 12,
     "frame_height": 12,
@@ -386,6 +386,24 @@
     "metadata": {
       "source_format": "aseprite",
       "sprite_name": "bg",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "bug_ui.0001": {
+    "name": "bug_ui.0001",
+    "x": 490,
+    "y": 440,
+    "frame_width": 12,
+    "frame_height": 13,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 12,
+    "sprite_height": 13,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "bug_ui",
       "tags": [],
       "duration": 100,
       "frame_number": 1

@@ -6,11 +6,15 @@ from entities.ant import Ant
 
 if TYPE_CHECKING:
     from entities.bug import Bug
+    from entities.game_manager import GameManager
 
 
 class BugSpawner(Entity):
     def __init__(self) -> None:
         super().__init__()
+
+        self.game_manager: GameManager | None = None
+
         self.waypoints: list[Point] = []
 
         # BottomLeft
@@ -23,20 +27,32 @@ class BugSpawner(Entity):
         self.waypoints_8: list[Point] = []
         self.waypoints_9: list[Point] = []
 
-    def spawn(self, bugs: list[str]) -> None:
-        """ Spawn Bugs. """
-        for i, bug in enumerate(bugs):
-            delay = i
-            match bug:
-                case "ant":
-                    start_coroutine(self._spawn_bug(delay, Ant))
+    def start(self) -> None:
+        self.game_manager = self.find("GameManager")
 
-    def _spawn_bug(self, delay: float, bug_class: type[Bug]) -> Generator:
-        yield from wait_for_seconds(delay)
+    def spawn(self, bug_class: type[Bug], alt_waypoints: str | None = None) -> None:
+        """ Spawn Bugs. """
+        if alt_waypoints == "4":
+            waypoints = self.waypoints_4
+        elif alt_waypoints == "5":
+            waypoints = self.waypoints_5
+        elif alt_waypoints == "6":
+            waypoints = self.waypoints_6
+        elif alt_waypoints == "7":
+            waypoints = self.waypoints_7
+        elif alt_waypoints == "8":
+            waypoints = self.waypoints_8
+        elif alt_waypoints == "9":
+            waypoints = self.waypoints_9
+        else:
+            waypoints = self.waypoints
+
         bug = bug_class()
         bug.set_position(self.position())
-        bug.waypoints = [w for w in self.waypoints]
+        bug.waypoints = [w for w in waypoints]
+
         self.scene.entities.add(bug)
+        self.game_manager.bugs_this_wave += 1
 
     def debug_draw(self, camera: Camera) -> None:
         w_lists = [self.waypoints,

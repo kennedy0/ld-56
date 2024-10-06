@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from potion import *
 
+from entities.ant import Ant
 
 if TYPE_CHECKING:
     from entities.apple import Apple
@@ -34,11 +35,13 @@ class GameManager(Entity):
 
         # Current bugs in on the map
         self.bugs: list[Bug] = []
+        self.bugs_this_wave = 0
 
         # Game state
         self.game_over = False
         self.wave = -1
-        self.total_waves = 5
+        self.total_waves = 4
+        self.wave_in_progress = False
 
         # Tutorial
         self.is_tutorial = False
@@ -78,6 +81,10 @@ class GameManager(Entity):
                 self.start_wave_1()
             if Keyboard.get_key_down(Keyboard.NUM_2):
                 self.start_wave_2()
+            if Keyboard.get_key_down(Keyboard.NUM_3):
+                self.start_wave_3()
+            if Keyboard.get_key_down(Keyboard.NUM_4):
+                self.start_wave_4()
 
     def start_game(self) -> None:
         Log.debug("START GAME")
@@ -190,13 +197,89 @@ class GameManager(Entity):
 
     def start_wave_1(self) -> None:
         Log.debug("START Wave 1")
-        bugs = ["ant"] * 10
-        self.bug_spawner_top_left.spawn(bugs)
+
+        def _c() -> Generator:
+            # 10 Ants, TopLeft
+            for i in range(10):
+                self.bug_spawner_top_left.spawn(Ant)
+                yield from wait_for_seconds(1)
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from North-West!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.start_cutscene()
+        self.wave_in_progress = True
 
     def start_wave_2(self) -> None:
         Log.debug("START Wave 2")
-        bugs = ["ant"] * 10
-        self.bug_spawner_top_right.spawn(bugs)
+
+        def _c() -> Generator:
+            # 10 Ants, TopRight
+            for i in range(10):
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(1)
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from North-East!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.start_cutscene()
+        self.wave_in_progress = True
+
+    def start_wave_3(self) -> None:
+        Log.debug("START Wave 3")
+
+        def _c() -> Generator:
+            # 10 Ants, BottomRight
+            for i in range(10):
+                self.bug_spawner_bottom_right.spawn(Ant, "9")
+                yield from wait_for_seconds(1)
+
+            # 10 Ants, BottomRight
+            for i in range(10):
+                self.bug_spawner_bottom_right.spawn(Ant, "8")
+                yield from wait_for_seconds(1)
+
+            # 10 Ants, BottomRight
+            for i in range(10):
+                self.bug_spawner_bottom_right.spawn(Ant, "7")
+                yield from wait_for_seconds(1)
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from South-East!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.start_cutscene()
+        self.wave_in_progress = True
+
+    def start_wave_4(self) -> None:
+        Log.debug("START Wave 3")
+
+        def _c() -> Generator:
+            # 30 Ants, BottomLeft
+            waypoints = ["4, 5, 6"]
+            waypoint_index = 0
+
+            for i in range(30):
+                # Get lane
+                lane = waypoints[waypoint_index]
+
+                # Spawn bug
+                self.bug_spawner_bottom_right.spawn(Ant, lane)
+                yield from wait_for_seconds(1)
+
+                # Advance index
+                waypoint_index += 1
+                if waypoint_index >= len(waypoints):
+                    waypoint_index = 0
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from South-West!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.start_cutscene()
+        self.wave_in_progress = True
 
     def start_victory(self) -> None:
         print("ANDREW!!!, need to set `self.game_over = True` when victory condition is confirmed")

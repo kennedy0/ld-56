@@ -3,6 +3,7 @@ from potion import *
 from entities.apple import Apple
 from entities.apple_ui import AppleUI
 from entities.bg import Bg
+from entities.bug_ui import BugUI
 from entities.bug_spawner import BugSpawner
 from entities.camera_controller import CameraController
 from entities.cutscene import Cutscene
@@ -36,6 +37,7 @@ class MainScene(Scene):
         self.entities.add(Player())
         self.entities.add(TextBox())
         self.entities.add(AppleUI())
+        self.entities.add(BugUI())
         self.entities.add(ScreenFade())
         self.entities.add(VictoryScreen())
         self.entities.add(DefeatScreen())
