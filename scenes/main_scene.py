@@ -79,14 +79,50 @@ class MainScene(Scene):
                     spawner_match = bug_spawner_top_left
                 elif name == "Path2":
                     spawner_match = bug_spawner_top_right
+                elif name in ("Path4", "Path5", "Path6"):
+                    spawner_match = bug_spawner_bottom_left
+                elif name in ("Path7", "Path8", "Path9"):
+                    spawner_match = bug_spawner_bottom_right
                 else:
                     Log.error(f"Path is not implemented: {name}")
 
                 if spawner_match:
-                    for waypoint in waypoints:
-                        x = waypoint['cx']
-                        y = waypoint['cy']
-                        spawner_match.waypoints.append(Point(x, y))
+                    if name == "Path4":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_4.append(Point(x, y))
+                    elif name == "Path5":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_5.append(Point(x, y))
+                    elif name == "Path6":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_6.append(Point(x, y))
+                    elif name == "Path7":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_7.append(Point(x, y))
+                    elif name == "Path8":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_8.append(Point(x, y))
+                    elif name == "Path9":
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints_9.append(Point(x, y))
+                    else:
+                        for waypoint in waypoints:
+                            x = waypoint['cx']
+                            y = waypoint['cy']
+                            spawner_match.waypoints.append(Point(x, y))
+
                 ldtk_entity.destroy()
 
             elif ldtk_entity.name.startswith("Rock-"):

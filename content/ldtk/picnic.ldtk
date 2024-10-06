@@ -1027,7 +1027,7 @@
 						},
 						{
 							"__identifier": "Path",
-							"__grid": [20,395],
+							"__grid": [7,387],
 							"__pivot": [0,0],
 							"__tags": [],
 							"__tile": null,
@@ -1036,53 +1036,53 @@
 							"width": 1,
 							"height": 1,
 							"defUid": 2,
-							"px": [20,395],
+							"px": [7,387],
 							"fieldInstances": [
 								{ "__identifier": "Name", "__type": "String", "__value": "Path6", "__tile": null, "defUid": 5, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Path6"]
 								}] },
 								{ "__identifier": "Waypoints", "__type": "Array<Point>", "__value": [
-									{ "cx": 72, "cy": 377 },
-									{ "cx": 114, "cy": 397 },
-									{ "cx": 274, "cy": 316 },
-									{ "cx": 373, "cy": 367 },
-									{ "cx": 483, "cy": 312 },
-									{ "cx": 343, "cy": 242 },
-									{ "cx": 354, "cy": 237 }
+									{ "cx": 59, "cy": 369 },
+									{ "cx": 101, "cy": 389 },
+									{ "cx": 261, "cy": 308 },
+									{ "cx": 360, "cy": 359 },
+									{ "cx": 470, "cy": 304 },
+									{ "cx": 330, "cy": 234 },
+									{ "cx": 341, "cy": 229 }
 								], "__tile": null, "defUid": 4, "realEditorValues": [
 									{
 										"id": "V_String",
-										"params": ["72,377"]
+										"params": ["59,369"]
 									},
 									{
 										"id": "V_String",
-										"params": ["114,397"]
+										"params": ["101,389"]
 									},
 									{
 										"id": "V_String",
-										"params": ["274,316"]
+										"params": ["261,308"]
 									},
 									{
 										"id": "V_String",
-										"params": ["373,367"]
+										"params": ["360,359"]
 									},
 									{
 										"id": "V_String",
-										"params": ["483,312"]
+										"params": ["470,304"]
 									},
 									{
 										"id": "V_String",
-										"params": ["343,242"]
+										"params": ["330,234"]
 									},
 									{
 										"id": "V_String",
-										"params": ["354,237"]
+										"params": ["341,229"]
 									}
 								] }
 							],
-							"__worldX": 20,
-							"__worldY": 395
+							"__worldX": 7,
+							"__worldY": 387
 						},
 						{
 							"__identifier": "Path",

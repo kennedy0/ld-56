@@ -13,6 +13,16 @@ class BugSpawner(Entity):
         super().__init__()
         self.waypoints: list[Point] = []
 
+        # BottomLeft
+        self.waypoints_4: list[Point] = []
+        self.waypoints_5: list[Point] = []
+        self.waypoints_6: list[Point] = []
+
+        # BottomRight
+        self.waypoints_7: list[Point] = []
+        self.waypoints_8: list[Point] = []
+        self.waypoints_9: list[Point] = []
+
     def spawn(self, bugs: list[str]) -> None:
         """ Spawn Bugs. """
         for i, bug in enumerate(bugs):
@@ -29,5 +39,17 @@ class BugSpawner(Entity):
         self.scene.entities.add(bug)
 
     def debug_draw(self, camera: Camera) -> None:
-        for waypoint in self.waypoints:
-            waypoint.draw(camera, Color.white())
+        w_lists = [self.waypoints,
+                   self.waypoints_4, self.waypoints_5, self.waypoints_6,
+                   self.waypoints_7, self.waypoints_8, self.waypoints_9]
+
+        for wlist in w_lists:
+            if not wlist:
+                continue
+
+            for i, waypoint in enumerate(wlist):
+                waypoint.draw(camera, Color.white())
+
+                if i + 1 < len(wlist):
+                    next_waypoint = wlist[i+1]
+                    Line(waypoint, next_waypoint).draw(camera, Color.red())
