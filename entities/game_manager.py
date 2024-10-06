@@ -1,4 +1,5 @@
 from __future__ import annotations
+import math
 
 from potion import *
 
@@ -13,6 +14,7 @@ if TYPE_CHECKING:
     from entities.defeat_screen import DefeatScreen
     from entities.player import Player
     from entities.victory_screen import VictoryScreen
+    from entities.wave_banner import WaveBanner
 
 
 class GameManager(Entity):
@@ -27,6 +29,7 @@ class GameManager(Entity):
         self.defeat_screen: DefeatScreen | None = None
         self.player: Player | None = None
         self.victory_screen: VictoryScreen | None = None
+        self.wave_banner: WaveBanner | None = None
 
         self.bug_spawner_top_left: BugSpawner | None = None
         self.bug_spawner_top_right: BugSpawner | None = None
@@ -41,7 +44,7 @@ class GameManager(Entity):
         self.game_over = False
         self.wave = -1
         self.total_waves = 4
-        self.wave_in_progress = False
+        self.wave_started = False
 
         # Tutorial
         self.is_tutorial = False
@@ -56,6 +59,7 @@ class GameManager(Entity):
         self.defeat_screen = self.find("DefeatScreen")
         self.player = self.find("Player")
         self.victory_screen = self.find("VictoryScreen")
+        self.wave_banner = self.find("WaveBanner")
 
         self.bug_spawner_top_left = self.find("BugSpawnerTopLeft")
         self.bug_spawner_top_right = self.find("BugSpawnerTopRight")
@@ -63,19 +67,7 @@ class GameManager(Entity):
         self.bug_spawner_bottom_right = self.find("BugSpawnerBottomRight")
 
     def update(self) -> None:
-        if not self.game_started:
-            self.game_started = True
-            if self.is_tutorial:
-                self.start_tutorial()
-            else:
-                self.start_game()
-
-        # Check for game over
-        if self.apple.hp <= 0 and not self.game_over:
-            self.game_over = True
-            self.start_defeat()
-            return
-
+        # Manually start waves with keyboard
         if __debug__:
             if Keyboard.get_key_down(Keyboard.NUM_1):
                 self.start_wave_1()
@@ -84,6 +76,36 @@ class GameManager(Entity):
             if Keyboard.get_key_down(Keyboard.NUM_3):
                 self.start_wave_3()
             if Keyboard.get_key_down(Keyboard.NUM_4):
+                self.start_wave_4()
+
+        # Start the game
+        if not self.game_started:
+            self.game_started = True
+            if self.is_tutorial:
+                self.start_tutorial()
+
+        # Check for game over
+        if self.apple.hp <= 0 and not self.game_over:
+            self.game_over = True
+            self.start_defeat()
+            return
+
+        # Don't do wave logic on the tutorial
+        if self.is_tutorial:
+            return
+
+        # Advance wave
+        if not self.wave_started:
+            self.wave_started = True
+            self.wave += 1
+
+            if self.wave == 0:
+                self.start_wave_1()
+            if self.wave == 1:
+                self.start_wave_2()
+            if self.wave == 2:
+                self.start_wave_3()
+            if self.wave == 3:
                 self.start_wave_4()
 
     def start_game(self) -> None:
@@ -204,12 +226,15 @@ class GameManager(Entity):
                 self.bug_spawner_top_left.spawn(Ant)
                 yield from wait_for_seconds(1)
 
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from North-West!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
-        self.wave_in_progress = True
 
     def start_wave_2(self) -> None:
         Log.debug("START Wave 2")
@@ -220,12 +245,15 @@ class GameManager(Entity):
                 self.bug_spawner_top_right.spawn(Ant)
                 yield from wait_for_seconds(1)
 
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from North-East!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
-        self.wave_in_progress = True
 
     def start_wave_3(self) -> None:
         Log.debug("START Wave 3")
@@ -246,12 +274,15 @@ class GameManager(Entity):
                 self.bug_spawner_bottom_right.spawn(Ant, "7")
                 yield from wait_for_seconds(1)
 
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from South-East!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
-        self.wave_in_progress = True
 
     def start_wave_4(self) -> None:
         Log.debug("START Wave 3")
@@ -274,12 +305,49 @@ class GameManager(Entity):
                 if waypoint_index >= len(waypoints):
                     waypoint_index = 0
 
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from South-West!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
         self.cutscene.start_cutscene()
-        self.wave_in_progress = True
+
+    def show_wave_banner(self) -> Generator:
+        left = -320
+        center = 0
+        right = 320
+        self.wave_banner.x = left
+        self.wave_banner.visible = True
+        yield
+
+        t = 0
+        while t < 1.0:
+            t += Time.delta_time
+            tt = math.sqrt(t)
+            self.wave_banner.x = pmath.lerp(left, center, tt)
+            yield
+
+        yield from wait_for_seconds(3)
+
+        t = 0
+        while t < 1.0:
+            t += Time.delta_time
+            tt = t ** 2
+            self.wave_banner.x = pmath.lerp(center, right, tt)
+            yield
+
+        self.wave_banner.visible = False
+        self.wave_banner.x = left
+        yield from wait_for_seconds(3)
+
+    def wait_for_wave_to_finish(self) -> Generator:
+        while self.bugs:
+            yield
+
+    def end_wave(self) -> Generator:
+        self.wave_started = False
+        yield
 
     def start_victory(self) -> None:
         print("ANDREW!!!, need to set `self.game_over = True` when victory condition is confirmed")

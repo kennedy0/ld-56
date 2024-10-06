@@ -14,6 +14,7 @@ from entities.rock import Rock
 from entities.screen_fade import ScreenFade
 from entities.text_box import TextBox
 from entities.victory_screen import VictoryScreen
+from entities.wave_banner import WaveBanner
 
 
 class MainScene(Scene):
@@ -41,6 +42,7 @@ class MainScene(Scene):
         self.entities.add(ScreenFade())
         self.entities.add(VictoryScreen())
         self.entities.add(DefeatScreen())
+        self.entities.add(WaveBanner())
 
         # Create bug spawners
         bug_spawner_top_left = BugSpawner()

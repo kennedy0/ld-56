@@ -14,6 +14,7 @@ sprites_src = assets_folder / "sprites"
 # Fonts
 fonts_dst.mkdir(parents=True, exist_ok=True)
 generate_bitmap_font(fonts_src / "udon.ttf", fonts_dst, 16)
+generate_bitmap_font(fonts_src / "udon.ttf", fonts_dst, 32)
 generate_bitmap_font(fonts_src / "m5x7.ttf", fonts_dst, 16)
 generate_bitmap_font(fonts_src / "m3x6.ttf", fonts_dst, 16)
 

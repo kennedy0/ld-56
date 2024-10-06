@@ -47,13 +47,12 @@ class DefeatScreen(Entity):
                 self.apple_sprite_position = Point(160, 55)
                 self.defeat_text.text = "How on Earth Did You Fail the Tutorial?!"
                 self.defeat_text_position = Point(160, 5)
-                self.wave_text.text = (f"Waves Cleared: {wave} / {total_waves}\nYou cleared NEGATIVE ONE waves. We didn't\n"
+                self.wave_text.text = (f"Waves Cleared: -1/{total_waves}\nYou cleared NEGATIVE ONE waves. You didn't\n"
                                        f"even get the chance to increment the\n"
                                        f"wave counter.")
                 self.wave_text_position = Point(160, 70)
         except:
             pass
-
 
         # Continue on mouse click
         yield from wait_for_seconds(1)
