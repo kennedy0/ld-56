@@ -13,8 +13,10 @@ class CameraController(Entity):
         self.name = "CameraController"
         self.target_point: Point | None = None
         self.player: Player | None = None
-        self.epsilon_x = 10
-        self.epsilon_y = 5
+        # self.epsilon_x = 10
+        # self.epsilon_y = 5
+        self.epsilon_x = 5
+        self.epsilon_y = 2
 
     def start(self) -> None:
         self.player = self.find("Player")

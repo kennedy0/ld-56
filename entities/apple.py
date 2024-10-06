@@ -12,6 +12,7 @@ class Apple(Entity):
     def __init__(self) -> None:
         super().__init__()
         self.name = "Apple"
+        self.tags.add("Rock")
 
         # Entity references
         self.apple_ui: AppleUI | None = None
@@ -41,8 +42,8 @@ class Apple(Entity):
         
             
         # HP
-        self.max_hp = 100
-        self._hp = 100
+        self.max_hp = 300
+        self._hp = self.max_hp
         self.sfx = SoundBank("sfx/apple")
         self.sfx_cooldown = 0
         self.sfx_cooldown_max = .2

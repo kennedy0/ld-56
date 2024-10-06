@@ -66,11 +66,10 @@ class Grasshopper(Bug):
     def update_animation(self) -> None:
         self.sprite.update()
 
-        if self.mx or self.my:
-            if self.fly_timer:
-                self.sprite.play("Fly")
-            else:
-                self.sprite.play("Run")
+        if self.fly_timer:
+            self.sprite.play("Fly")
+        elif self.mx or self.my:
+            self.sprite.play("Run")
         elif self.done_moving:
             self.sprite.play("Attack")
         else:

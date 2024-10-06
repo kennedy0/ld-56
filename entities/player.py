@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from math import atan2, degrees
-from modulefinder import packagePathMap
 
 from potion import *
 
@@ -39,7 +38,7 @@ class Player(Entity):
         self.move_input_timer = 0
         self.move_direction = Vector2.zero()
         self.move_speed = 0
-        self.max_move_speed = 1
+        self.max_move_speed = 1.5
         self.brake_multiplier = 2
         self.mx = 0
         self.my = 0
@@ -110,7 +109,14 @@ class Player(Entity):
         self.engine_sfx_3 = SoundEffect("sfx/engine3.wav")
         self.engine_sfx_4 = SoundEffect("sfx/engine4.wav")
         self.engine_sfx_5 = SoundEffect("sfx/engine5.wav")
-        self.boost_sfx = SoundEffect("sfx/boost")
+        self.boost_sfx = SoundEffect("sfx/boost.wav")
+        self.rock_sfx = SoundEffect("sfx/collide_rock.wav")
+
+        self.rock_timer = 0
+        self.rock_timer_max = 1
+        self.rock_vector = Vector2.zero()
+        self.rock_speed = 0
+        self.rock_speed_max = .75
 
     def start(self) -> None:
         self.game_manager = self.find("GameManager")
@@ -124,6 +130,9 @@ class Player(Entity):
     def bbox(self) -> Rect:
         return Rect(self.x - self.width // 2, self.y - self.height // 2, self.width, self.height)
 
+    def current_speed(self) -> float:
+        return Vector2(self.mx, self.my).length()
+
     def update(self) -> None:
         self.update_move_input()
         # self.update_boost()
@@ -136,8 +145,12 @@ class Player(Entity):
         # self.update_engine_sfx()
         self.zsort()
 
+        self.rock_timer -= Time.delta_time
+        if self.rock_timer < 0:
+            self.rock_timer = 0
+
     def update_move_input(self) -> None:
-        if not self.can_control:
+        if not self.can_control or self.rock_timer > 0:
             self.move_input = False
             return
 
@@ -204,11 +217,19 @@ class Player(Entity):
         self.my = self.move_direction.y * self.move_speed
 
         # Move
-        if self.mx:
-            self.move_x(self.mx)
-        if self.my:
-            self.move_y(self.my)
+        if self.rock_timer > 0:
+            self.rock_speed -= Time.delta_time
+            if self.rock_speed < 0:
+                self.rock_speed = 0
+            self.move_x(self.rock_vector.x * self.rock_speed)
+            self.move_y(self.rock_vector.y * self.rock_speed)
+        else:
+            if self.mx:
+                self.move_x(self.mx)
+            if self.my:
+                self.move_y(self.my)
 
+        # Prevent out of bounds
         self.x = pmath.clamp(self.x, 0, 800)
         self.y = pmath.clamp(self.y, 0, 400)
 
@@ -303,3 +324,12 @@ class Player(Entity):
 
         bbox = Rect(x - self.width // 2, y - self.height // 2, self.width, self.height)
         return other.intersects(bbox)
+
+    def on_collision_begin(self, other: Entity) -> None:
+        if "Rock" in other.tags:
+            if self.current_speed() > .5:
+                if self.rock_timer == 0:
+                    self.rock_vector = (self.position() - other.position()).to_vector2().normalized()
+                    self.rock_speed = self.rock_speed_max
+                    self.rock_timer = self.rock_timer_max
+                    self.rock_sfx.play()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 import math
 
+from entities.ladybug import Ladybug
 from potion import *
 
 from entities.ant import Ant
@@ -44,7 +45,7 @@ class GameManager(Entity):
         # Game state
         self.game_over = False
         self.wave = -1
-        self.total_waves = 4
+        self.total_waves = 5
         self.wave_started = False
         self.wave_ended = False
 
@@ -78,16 +79,6 @@ class GameManager(Entity):
                 self.wave_ended = True
                 self.bugs_this_wave = 0
 
-            # Start waves with keyboard
-            if Keyboard.get_key_down(Keyboard.NUM_1):
-                self.start_wave_1()
-            if Keyboard.get_key_down(Keyboard.NUM_2):
-                self.start_wave_2()
-            if Keyboard.get_key_down(Keyboard.NUM_3):
-                self.start_wave_3()
-            if Keyboard.get_key_down(Keyboard.NUM_4):
-                self.start_wave_4()
-
         if self.is_test:
             return
 
@@ -120,6 +111,8 @@ class GameManager(Entity):
                 self.start_wave_3()
             elif self.wave == 3:
                 self.start_wave_4()
+            elif self.wave == 4:
+                self.start_wave_5()
             else:
                 if not self.game_over:
                     self.game_over = True
@@ -240,8 +233,6 @@ class GameManager(Entity):
         self.cutscene.pause(.5)
 
     def start_wave_1(self) -> None:
-        Log.debug("START Wave 1")
-
         def _c() -> Generator:
             # 10 Ants, TopLeft
             for i in range(10):
@@ -252,7 +243,7 @@ class GameManager(Entity):
         self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from North-West!")
-        self.cutscene.text("Ants: slow and weak.\nShouldn't be a problem.")
+        self.cutscene.text("Ants: weakest of the bunch.\nShouldn't be a problem.")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
@@ -260,8 +251,6 @@ class GameManager(Entity):
         self.cutscene.start_cutscene()
 
     def start_wave_2(self) -> None:
-        Log.debug("START Wave 2")
-
         def _c() -> Generator:
             # 10 Grasshoppers, TopRight
             for i in range(10):
@@ -280,8 +269,24 @@ class GameManager(Entity):
         self.cutscene.start_cutscene()
 
     def start_wave_3(self) -> None:
-        Log.debug("START Wave 3")
+        def _c() -> Generator:
+            # 5 Ladybugs, TopLeft
+            for i in range(5):
+                self.bug_spawner_top_left.spawn(Ladybug)
+                yield from wait_for_seconds(3)
 
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from North-West!")
+        self.cutscene.text("Ladybugs: slow, but tough.\nDon't underestimate them.")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
+        self.cutscene.start_cutscene()
+
+    def start_wave_4(self) -> None:
         def _c() -> Generator:
             # 10 Ants, BottomRight
             for i in range(10):
@@ -308,9 +313,7 @@ class GameManager(Entity):
         self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
 
-    def start_wave_4(self) -> None:
-        Log.debug("START Wave 3")
-
+    def start_wave_5(self) -> None:
         def _c() -> Generator:
             # 30 Ants, BottomLeft
             waypoints = ["4", "5", "6"]

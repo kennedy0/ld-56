@@ -158,11 +158,11 @@ class Bug(Entity):
                 self.mx = 0
                 self.my = 0
             elif self.move_speed == 1:
-                frame_threshold = 8
+                frame_threshold = 7
             elif self.move_speed == 2:
-                frame_threshold = 6
+                frame_threshold = 5
             elif self.move_speed == 3:
-                frame_threshold = 4
+                frame_threshold = 3
             elif self.move_speed == 4:
                 frame_threshold = 2
             else:

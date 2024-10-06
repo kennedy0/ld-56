@@ -1,8 +1,8 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 753,
-    "y": 537,
+    "x": 809,
+    "y": 485,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -21,7 +21,7 @@
   },
   "ant.0002": {
     "name": "ant.0002",
-    "x": 771,
+    "x": 797,
     "y": 537,
     "frame_width": 18,
     "frame_height": 12,
@@ -41,8 +41,8 @@
   },
   "ant.0003": {
     "name": "ant.0003",
-    "x": 789,
-    "y": 537,
+    "x": 356,
+    "y": 450,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -61,8 +61,8 @@
   },
   "ant.0004": {
     "name": "ant.0004",
-    "x": 807,
-    "y": 537,
+    "x": 374,
+    "y": 450,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -81,7 +81,7 @@
   },
   "ant.0005": {
     "name": "ant.0005",
-    "x": 356,
+    "x": 392,
     "y": 450,
     "frame_width": 18,
     "frame_height": 12,
@@ -101,7 +101,7 @@
   },
   "ant.0006": {
     "name": "ant.0006",
-    "x": 656,
+    "x": 672,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -121,7 +121,7 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 535,
+    "x": 651,
     "y": 450,
     "frame_width": 18,
     "frame_height": 11,
@@ -142,7 +142,7 @@
   "ant_shadow.0001": {
     "name": "ant_shadow.0001",
     "x": 802,
-    "y": 529,
+    "y": 530,
     "frame_width": 16,
     "frame_height": 3,
     "offset_x": 0,
@@ -159,8 +159,8 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 374,
-    "y": 450,
+    "x": 815,
+    "y": 537,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -357,7 +357,7 @@
   },
   "apple_ui.0001": {
     "name": "apple_ui.0001",
-    "x": 390,
+    "x": 410,
     "y": 450,
     "frame_width": 12,
     "frame_height": 12,
@@ -393,8 +393,8 @@
   },
   "bug_ui.0001": {
     "name": "bug_ui.0001",
-    "x": 809,
-    "y": 485,
+    "x": 820,
+    "y": 512,
     "frame_width": 12,
     "frame_height": 13,
     "offset_x": 0,
@@ -411,7 +411,7 @@
   },
   "grashopper_splat.0001": {
     "name": "grashopper_splat.0001",
-    "x": 402,
+    "x": 422,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -429,7 +429,7 @@
   },
   "grasshopper.0001": {
     "name": "grasshopper.0001",
-    "x": 418,
+    "x": 438,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -449,7 +449,7 @@
   },
   "grasshopper.0002": {
     "name": "grasshopper.0002",
-    "x": 435,
+    "x": 455,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -469,7 +469,7 @@
   },
   "grasshopper.0003": {
     "name": "grasshopper.0003",
-    "x": 452,
+    "x": 472,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -489,7 +489,7 @@
   },
   "grasshopper.0004": {
     "name": "grasshopper.0004",
-    "x": 469,
+    "x": 489,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -509,7 +509,7 @@
   },
   "grasshopper.0005": {
     "name": "grasshopper.0005",
-    "x": 486,
+    "x": 506,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -529,8 +529,8 @@
   },
   "grasshopper.0006": {
     "name": "grasshopper.0006",
-    "x": 818,
-    "y": 512,
+    "x": 688,
+    "y": 537,
     "frame_width": 14,
     "frame_height": 16,
     "offset_x": 0,
@@ -549,7 +549,7 @@
   },
   "grasshopper.0007": {
     "name": "grasshopper.0007",
-    "x": 503,
+    "x": 523,
     "y": 450,
     "frame_width": 15,
     "frame_height": 12,
@@ -569,7 +569,7 @@
   },
   "grasshopper.0008": {
     "name": "grasshopper.0008",
-    "x": 672,
+    "x": 702,
     "y": 537,
     "frame_width": 17,
     "frame_height": 16,
@@ -589,7 +589,7 @@
   },
   "grasshopper.0009": {
     "name": "grasshopper.0009",
-    "x": 518,
+    "x": 538,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -605,6 +605,184 @@
       ],
       "duration": 100,
       "frame_number": 9
+    }
+  },
+  "ladybug.0001": {
+    "name": "ladybug.0001",
+    "x": 555,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Idle"
+      ],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "ladybug.0002": {
+    "name": "ladybug.0002",
+    "x": 571,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "ladybug.0003": {
+    "name": "ladybug.0003",
+    "x": 587,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "ladybug.0004": {
+    "name": "ladybug.0004",
+    "x": 603,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "ladybug.0005": {
+    "name": "ladybug.0005",
+    "x": 619,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "ladybug.0006": {
+    "name": "ladybug.0006",
+    "x": 719,
+    "y": 537,
+    "frame_width": 14,
+    "frame_height": 16,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 6
+    }
+  },
+  "ladybug.0007": {
+    "name": "ladybug.0007",
+    "x": 669,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 11,
+    "offset_x": 2,
+    "offset_y": 5,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 7
+    }
+  },
+  "ladybug.0008": {
+    "name": "ladybug.0008",
+    "x": 640,
+    "y": 554,
+    "frame_width": 16,
+    "frame_height": 8,
+    "offset_x": 1,
+    "offset_y": 8,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug",
+      "tags": [
+        "Hide"
+      ],
+      "duration": 100,
+      "frame_number": 8
+    }
+  },
+  "ladybug_splat.0001": {
+    "name": "ladybug_splat.0001",
+    "x": 635,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 2,
+    "offset_y": 2,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "ladybug_splat",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
     }
   },
   "player.0001": {
@@ -751,6 +929,21 @@
       "frame_number": 8
     }
   },
+  "player_shadow": {
+    "name": "player_shadow",
+    "x": 802,
+    "y": 512,
+    "frame_width": 18,
+    "frame_height": 18,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 18,
+    "sprite_height": 18,
+    "metadata": {
+      "source_format": "png",
+      "sprite_name": "player_shadow"
+    }
+  },
   "radio.0001": {
     "name": "radio.0001",
     "x": 320,
@@ -771,7 +964,7 @@
   },
   "rock_a.0001": {
     "name": "rock_a.0001",
-    "x": 689,
+    "x": 733,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -789,7 +982,7 @@
   },
   "rock_b.0001": {
     "name": "rock_b.0001",
-    "x": 721,
+    "x": 765,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,
@@ -807,8 +1000,8 @@
   },
   "rock_c.0001": {
     "name": "rock_c.0001",
-    "x": 802,
-    "y": 512,
+    "x": 640,
+    "y": 537,
     "frame_width": 16,
     "frame_height": 17,
     "offset_x": 1,
@@ -825,7 +1018,7 @@
   },
   "rock_d.0001": {
     "name": "rock_d.0001",
-    "x": 705,
+    "x": 749,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -843,7 +1036,7 @@
   },
   "rock_e.0001": {
     "name": "rock_e.0001",
-    "x": 737,
+    "x": 781,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,
@@ -861,7 +1054,7 @@
   },
   "rock_f.0001": {
     "name": "rock_f.0001",
-    "x": 640,
+    "x": 656,
     "y": 537,
     "frame_width": 16,
     "frame_height": 17,
