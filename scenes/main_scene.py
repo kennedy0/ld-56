@@ -8,6 +8,7 @@ from entities.cutscene import Cutscene
 from entities.game_manager import GameManager
 from entities.player import Player
 from entities.rock import Rock
+from entities.screen_fade import ScreenFade
 from entities.text_box import TextBox
 
 
@@ -24,6 +25,7 @@ class MainScene(Scene):
         self.entities.add(Apple())
         self.entities.add(Player())
         self.entities.add(TextBox())
+        self.entities.add(ScreenFade())
 
         # Create bug spawners
         bug_spawner_top_left = BugSpawner()

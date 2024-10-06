@@ -24,7 +24,6 @@ class BugSpawner(Entity):
     def _spawn_bug(self, delay: float, bug_class: type[Bug]) -> Generator:
         yield from wait_for_seconds(delay)
         bug = bug_class()
-        bug.bug_spawner = self
         bug.set_position(self.position())
         bug.waypoints = [w for w in self.waypoints]
         self.scene.entities.add(bug)

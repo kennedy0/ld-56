@@ -5,7 +5,9 @@ from potion import *
 if TYPE_CHECKING :
     from entities.camera_controller import CameraController
     from entities.player import Player
+    from entities.screen_fade import ScreenFade
     from entities.text_box import TextBox
+
 
 
 class Cutscene(Entity):
@@ -17,12 +19,14 @@ class Cutscene(Entity):
         self._text_box: TextBox | None = None
         self._player: Player | None = None
         self._camera_controller: CameraController | None = None
+        self._screen_fade: ScreenFade | None = None
 
         self._coroutines = []
 
     def start(self) -> None:
         self._text_box = self.find("TextBox")
         self._player = self.find("Player")
+        self._screen_fade = self.find("ScreenFade")
         self._camera_controller = self.find("CameraController")
 
     def pause(self, seconds: float) -> None:
@@ -98,6 +102,23 @@ class Cutscene(Entity):
 
         self._coroutines.append(_c())
 
+    def add_custom_coroutine(self, coroutine: Generator) -> None:
+        self._coroutines.append(coroutine)
+
+    def fade_out(self) -> None:
+        self._coroutines.append(self._screen_fade.fade_out())
+
+    def fade_in(self) -> None:
+        self._coroutines.append(self._screen_fade.fade_in())
+
+    def load_start_screen(self) -> None:
+        def _c() -> Generator:
+            yield
+            from scenes.start_screen import StartScreen
+            Engine.load_scene(StartScreen())
+
+        self._coroutines.append(_c())
+
     def start_cutscene(self) -> None:
         if not self._coroutines:
             Log.error(f"Can't start cutscene, there are no coroutines")
@@ -106,6 +127,7 @@ class Cutscene(Entity):
         def _cutscene_coroutine() -> Generator:
             for coroutine in self._coroutines:
                 yield from coroutine
+
             self._coroutines.clear()
 
         start_coroutine(_cutscene_coroutine())

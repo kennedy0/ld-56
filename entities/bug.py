@@ -47,6 +47,9 @@ class Bug(Entity):
         # Collision
         self.radius = 6
 
+        # Death
+        self.dead = False
+
     def start(self) -> None:
         self.apple = self.find("Apple")
         self.game_manager = self.find("GameManager")
@@ -194,7 +197,13 @@ class Bug(Entity):
             self.apple.hp -= 1
 
     def kill(self) -> None:
-        self.game_manager.bugs.remove(self)
+        self.dead = True
+
+        try:
+            self.game_manager.bugs.remove(self)
+        except:
+            Log.warning(f"Could not remove {self} from game manager")
+
         self.destroy()
 
         ant_splat = AntSplat()
