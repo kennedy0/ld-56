@@ -314,7 +314,6 @@ class GameManager(Entity):
                 lane = waypoints[waypoint_index]
 
                 # Spawn bug
-                print(lane)
                 self.bug_spawner_bottom_left.spawn(Ant, lane)
                 yield from wait_for_seconds(1)
 
