@@ -63,6 +63,10 @@ class Bug(Entity):
         self.update_animation()
         self.update_attack()
 
+        if __debug__:
+            if Keyboard.get_key_down(Keyboard.K):
+                self.kill()
+
     def update_move_target(self) -> None:
         if self.done_moving:
             return
@@ -197,13 +201,11 @@ class Bug(Entity):
             self.apple.hp -= 1
 
     def kill(self) -> None:
+        if self.dead:
+            return
+
         self.dead = True
-
-        try:
-            self.game_manager.bugs.remove(self)
-        except:
-            Log.warning(f"Could not remove {self} from game manager")
-
+        self.game_manager.bugs.remove(self)
         self.destroy()
 
         ant_splat = AntSplat()

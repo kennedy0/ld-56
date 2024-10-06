@@ -45,6 +45,7 @@ class GameManager(Entity):
         self.wave = -1
         self.total_waves = 4
         self.wave_started = False
+        self.wave_ended = False
 
         # Tutorial
         self.is_tutorial = False
@@ -69,6 +70,13 @@ class GameManager(Entity):
     def update(self) -> None:
         # Manually start waves with keyboard
         if __debug__:
+            # Kill cutscene and end wave with Escape
+            if Keyboard.get_key_down(Keyboard.ESCAPE):
+                self.cutscene.stop_cutscene()
+                self.wave_ended = True
+                self.bugs_this_wave = 0
+
+            # Start waves with keyboard
             if Keyboard.get_key_down(Keyboard.NUM_1):
                 self.start_wave_1()
             if Keyboard.get_key_down(Keyboard.NUM_2):
@@ -101,12 +109,21 @@ class GameManager(Entity):
 
             if self.wave == 0:
                 self.start_wave_1()
-            if self.wave == 1:
+            elif self.wave == 1:
                 self.start_wave_2()
-            if self.wave == 2:
+            elif self.wave == 2:
                 self.start_wave_3()
-            if self.wave == 3:
+            elif self.wave == 3:
                 self.start_wave_4()
+            else:
+                if not self.game_over:
+                    self.game_over = True
+                    self.start_victory()
+
+        # End wave
+        if self.wave_ended:
+            self.wave_started = False
+            self.wave_ended = False
 
     def start_game(self) -> None:
         Log.debug("START GAME")
@@ -289,7 +306,7 @@ class GameManager(Entity):
 
         def _c() -> Generator:
             # 30 Ants, BottomLeft
-            waypoints = ["4, 5, 6"]
+            waypoints = ["4", "5", "6"]
             waypoint_index = 0
 
             for i in range(30):
@@ -297,7 +314,8 @@ class GameManager(Entity):
                 lane = waypoints[waypoint_index]
 
                 # Spawn bug
-                self.bug_spawner_bottom_right.spawn(Ant, lane)
+                print(lane)
+                self.bug_spawner_bottom_left.spawn(Ant, lane)
                 yield from wait_for_seconds(1)
 
                 # Advance index
@@ -311,6 +329,8 @@ class GameManager(Entity):
         self.cutscene.text("Bugs approaching from South-West!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
 
     def show_wave_banner(self) -> Generator:
@@ -346,12 +366,11 @@ class GameManager(Entity):
             yield
 
     def end_wave(self) -> Generator:
-        self.wave_started = False
+        self.wave_ended = True
+        self.bugs_this_wave = 0
         yield
 
     def start_victory(self) -> None:
-        print("ANDREW!!!, need to set `self.game_over = True` when victory condition is confirmed")
-
         if self.cutscene.is_running():
             self.cutscene.stop_cutscene()
 

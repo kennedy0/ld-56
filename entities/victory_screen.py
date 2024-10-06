@@ -40,10 +40,8 @@ class VictoryScreen(Entity):
             perc = apple.hp / apple.max_hp
 
             if perc > .9:
-                # t = "Apple Condition: <RAINBOW>PERFECT!!!</RAINBOW>"
                 t = "Apple Condition: PERFECT!!!"
             elif perc > .8:
-                # t = "Apple Condition: <EXCITING>Excellent!</EXCITING>"
                 t = "Apple Condition: Excellent!"
             elif perc > .7:
                 t = "Apple Condition: Great!"
@@ -63,7 +61,6 @@ class VictoryScreen(Entity):
             self.apple_text.text = t
         except:
             pass
-
 
         # Continue on mouse click
         yield from wait_for_seconds(1)

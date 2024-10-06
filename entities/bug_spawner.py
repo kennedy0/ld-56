@@ -2,8 +2,6 @@ from __future__ import annotations
 
 from potion import *
 
-from entities.ant import Ant
-
 if TYPE_CHECKING:
     from entities.bug import Bug
     from entities.game_manager import GameManager

@@ -62,6 +62,11 @@ class Apple(Entity):
         self.z = self.y * -1
 
     def update(self) -> None:
+        # Debug - Heal with H key
+        if __debug__:
+            if Keyboard.get_key_down(Keyboard.H):
+                self.hp = self.max_hp
+
         perc = self.hp / self.max_hp
 
         if perc > .9:

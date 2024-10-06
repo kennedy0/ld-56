@@ -27,6 +27,6 @@ class BugUI(Entity):
         self.text.text = f"{killed}/{total}"
 
     def draw(self, camera: Camera) -> None:
-        if self.game_manager.wave_started:
+        if self.game_manager.bugs_this_wave:
             self.sprite.draw(camera, self.sprite_position)
             self.text.draw(camera, self.text_position)
