@@ -1,8 +1,8 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 809,
-    "y": 485,
+    "x": 813,
+    "y": 537,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -21,8 +21,8 @@
   },
   "ant.0002": {
     "name": "ant.0002",
-    "x": 797,
-    "y": 537,
+    "x": 809,
+    "y": 485,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -121,7 +121,7 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 651,
+    "x": 773,
     "y": 450,
     "frame_width": 18,
     "frame_height": 11,
@@ -159,8 +159,8 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 815,
-    "y": 537,
+    "x": 410,
+    "y": 450,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -357,7 +357,7 @@
   },
   "apple_ui.0001": {
     "name": "apple_ui.0001",
-    "x": 410,
+    "x": 426,
     "y": 450,
     "frame_width": 12,
     "frame_height": 12,
@@ -409,9 +409,167 @@
       "frame_number": 1
     }
   },
+  "fast_ant.0001": {
+    "name": "fast_ant.0001",
+    "x": 438,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Idle"
+      ],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "fast_ant.0002": {
+    "name": "fast_ant.0002",
+    "x": 456,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "fast_ant.0003": {
+    "name": "fast_ant.0003",
+    "x": 474,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "fast_ant.0004": {
+    "name": "fast_ant.0004",
+    "x": 492,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "fast_ant.0005": {
+    "name": "fast_ant.0005",
+    "x": 510,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 12,
+    "offset_x": 1,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "fast_ant.0006": {
+    "name": "fast_ant.0006",
+    "x": 688,
+    "y": 537,
+    "frame_width": 16,
+    "frame_height": 16,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 6
+    }
+  },
+  "fast_ant.0007": {
+    "name": "fast_ant.0007",
+    "x": 791,
+    "y": 450,
+    "frame_width": 18,
+    "frame_height": 11,
+    "offset_x": 2,
+    "offset_y": 5,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 7
+    }
+  },
+  "fast_ant_splat.0001": {
+    "name": "fast_ant_splat.0001",
+    "x": 528,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 2,
+    "offset_y": 2,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "fast_ant_splat",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
   "grashopper_splat.0001": {
     "name": "grashopper_splat.0001",
-    "x": 422,
+    "x": 544,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -429,7 +587,7 @@
   },
   "grasshopper.0001": {
     "name": "grasshopper.0001",
-    "x": 438,
+    "x": 560,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -449,7 +607,7 @@
   },
   "grasshopper.0002": {
     "name": "grasshopper.0002",
-    "x": 455,
+    "x": 577,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -469,7 +627,7 @@
   },
   "grasshopper.0003": {
     "name": "grasshopper.0003",
-    "x": 472,
+    "x": 594,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -489,7 +647,7 @@
   },
   "grasshopper.0004": {
     "name": "grasshopper.0004",
-    "x": 489,
+    "x": 611,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -509,7 +667,7 @@
   },
   "grasshopper.0005": {
     "name": "grasshopper.0005",
-    "x": 506,
+    "x": 628,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -529,7 +687,7 @@
   },
   "grasshopper.0006": {
     "name": "grasshopper.0006",
-    "x": 688,
+    "x": 704,
     "y": 537,
     "frame_width": 14,
     "frame_height": 16,
@@ -549,7 +707,7 @@
   },
   "grasshopper.0007": {
     "name": "grasshopper.0007",
-    "x": 523,
+    "x": 645,
     "y": 450,
     "frame_width": 15,
     "frame_height": 12,
@@ -569,7 +727,7 @@
   },
   "grasshopper.0008": {
     "name": "grasshopper.0008",
-    "x": 702,
+    "x": 718,
     "y": 537,
     "frame_width": 17,
     "frame_height": 16,
@@ -589,7 +747,7 @@
   },
   "grasshopper.0009": {
     "name": "grasshopper.0009",
-    "x": 538,
+    "x": 660,
     "y": 450,
     "frame_width": 17,
     "frame_height": 12,
@@ -609,7 +767,7 @@
   },
   "ladybug.0001": {
     "name": "ladybug.0001",
-    "x": 555,
+    "x": 677,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -629,7 +787,7 @@
   },
   "ladybug.0002": {
     "name": "ladybug.0002",
-    "x": 571,
+    "x": 693,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -649,7 +807,7 @@
   },
   "ladybug.0003": {
     "name": "ladybug.0003",
-    "x": 587,
+    "x": 709,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -669,7 +827,7 @@
   },
   "ladybug.0004": {
     "name": "ladybug.0004",
-    "x": 603,
+    "x": 725,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -689,7 +847,7 @@
   },
   "ladybug.0005": {
     "name": "ladybug.0005",
-    "x": 619,
+    "x": 741,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -709,7 +867,7 @@
   },
   "ladybug.0006": {
     "name": "ladybug.0006",
-    "x": 719,
+    "x": 735,
     "y": 537,
     "frame_width": 14,
     "frame_height": 16,
@@ -729,7 +887,7 @@
   },
   "ladybug.0007": {
     "name": "ladybug.0007",
-    "x": 669,
+    "x": 809,
     "y": 450,
     "frame_width": 16,
     "frame_height": 11,
@@ -769,7 +927,7 @@
   },
   "ladybug_splat.0001": {
     "name": "ladybug_splat.0001",
-    "x": 635,
+    "x": 757,
     "y": 450,
     "frame_width": 16,
     "frame_height": 12,
@@ -964,7 +1122,7 @@
   },
   "rock_a.0001": {
     "name": "rock_a.0001",
-    "x": 733,
+    "x": 749,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -982,7 +1140,7 @@
   },
   "rock_b.0001": {
     "name": "rock_b.0001",
-    "x": 765,
+    "x": 781,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,
@@ -1018,7 +1176,7 @@
   },
   "rock_d.0001": {
     "name": "rock_d.0001",
-    "x": 749,
+    "x": 765,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -1036,7 +1194,7 @@
   },
   "rock_e.0001": {
     "name": "rock_e.0001",
-    "x": 781,
+    "x": 797,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,

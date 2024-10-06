@@ -27,7 +27,8 @@ class Ladybug(Bug):
         self.shell_cooldown_max_timer = 7
 
         self.shell_timer = 0
-        self.shell_max_timer = 5
+        self.shell_max_timer = 1
+        self.has_used_shell = False
 
         self.width = 4
         self.height = 4
@@ -98,7 +99,7 @@ class Ladybug(Bug):
     def kill(self) -> None:
         if self.shell_cooldown_timer <= 0:
             self.shell_cooldown_timer = self.shell_cooldown_max_timer
-            self.shell_timer = self.shell_max_timer + random.uniform(-1.5, 1.5)
+            self.shell_timer = self.shell_max_timer + random.uniform(.5, .5)
 
         if self.shell_timer > 0:
             return

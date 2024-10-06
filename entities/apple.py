@@ -42,7 +42,7 @@ class Apple(Entity):
         
             
         # HP
-        self.max_hp = 300
+        self.max_hp = 750
         self._hp = self.max_hp
         self.sfx = SoundBank("sfx/apple")
         self.sfx_cooldown = 0

@@ -47,7 +47,7 @@ class GameManager(Entity):
         # Game state
         self.game_over = False
         self.wave = -1
-        self.total_waves = 5
+        self.total_waves = 6
         self.wave_started = False
         self.wave_ended = False
 
@@ -115,6 +115,8 @@ class GameManager(Entity):
                 self.start_wave_4()
             elif self.wave == 4:
                 self.start_wave_5()
+            elif self.wave == 5:
+                self.start_wave_6()
             else:
                 if not self.game_over:
                     self.game_over = True
@@ -291,33 +293,31 @@ class GameManager(Entity):
     def start_wave_4(self) -> None:
         def _c1() -> Generator:
             for i in range(10):
-                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
-                yield from wait_for_seconds(1)
+                self.bug_spawner_top_right.spawn(Grasshopper)
+                self.bug_spawner_bottom_right.spawn(Ant, "8")
+                yield from wait_for_seconds(.5)
+                self.bug_spawner_bottom_right.spawn(Ant, "8")
+                yield from wait_for_seconds(.5)
 
-            for i in range(10):
-                self.bug_spawner_bottom_right.spawn(Ant, "9")
-                yield from wait_for_seconds(1)
-
-            for i in range(10):
-                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
-                yield from wait_for_seconds(1)
-
-        def _c2() -> Generator:
-            for i in range(10):
-                self.bug_spawner_top_right.spawn(Ladybug)
-                yield from wait_for_seconds(1)
+            for i in range(3):
+                self.bug_spawner_bottom_right.spawn(Ladybug, "7")
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(.5)
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(.5)
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(.5)
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(.5)
+                self.bug_spawner_top_right.spawn(Ant)
+                yield from wait_for_seconds(.5)
 
         self.cutscene.pause(3)
         self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
-        self.cutscene.text("Bugs approaching from South-East!")
+        self.cutscene.text("Bugs approaching from the East!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c1())
-        self.cutscene.pause(20)
-        self.cutscene.show_text_box()
-        self.cutscene.text("More bugs coming from North-East!")
-        self.cutscene.hide_text_box()
-        self.cutscene.add_custom_coroutine(_c2())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
         self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
@@ -348,6 +348,85 @@ class GameManager(Entity):
         self.cutscene.text("Look out, these guys are quick!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
+        self.cutscene.add_custom_coroutine(self.end_wave())
+        self.cutscene.start_cutscene()
+
+    def start_wave_6(self) -> None:
+        def _c1() -> Generator:
+            for i in range(5):
+                self.bug_spawner_top_left.spawn(Grasshopper)
+                self.bug_spawner_top_right.spawn(Grasshopper)
+                yield from wait_for_seconds(1)
+
+        def _c2() -> Generator:
+            for i in range(5):
+                self.bug_spawner_bottom_left.spawn(Ladybug, "4")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "7")
+                yield from wait_for_seconds(2)
+
+                self.bug_spawner_bottom_left.spawn(Ant, "5")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
+                yield from wait_for_seconds(2)
+
+                self.bug_spawner_bottom_left.spawn(Ant, "6")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "9")
+                yield from wait_for_seconds(2)
+
+        def _c3() -> Generator:
+            for i in range(4):
+                self.bug_spawner_top_left.spawn(Grasshopper)
+                self.bug_spawner_top_right.spawn(Grasshopper)
+                self.bug_spawner_bottom_left.spawn(Grasshopper, "5")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
+
+                self.bug_spawner_top_left.spawn(Ant)
+                self.bug_spawner_top_right.spawn(Ant)
+                self.bug_spawner_bottom_left.spawn(Ant, "5")
+                self.bug_spawner_bottom_right.spawn(Ant, "8")
+
+                yield from wait_for_seconds(1)
+
+            for i in range(2):
+                self.bug_spawner_top_left.spawn(Ladybug)
+                self.bug_spawner_top_right.spawn(Ladybug)
+                self.bug_spawner_bottom_left.spawn(FastAnt, "4")
+                self.bug_spawner_bottom_right.spawn(FastAnt, "9")
+                yield from wait_for_seconds(1)
+
+            for i in range(4):
+                self.bug_spawner_top_left.spawn(Ant)
+                self.bug_spawner_top_right.spawn(Ant)
+                self.bug_spawner_bottom_left.spawn(Grasshopper, "5")
+                self.bug_spawner_bottom_left.spawn(Ant, "6")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "7")
+                self.bug_spawner_bottom_right.spawn(Ant, "8")
+                yield from wait_for_seconds(1)
+
+            for i in range(4):
+                self.bug_spawner_top_left.spawn(FastAnt)
+                self.bug_spawner_top_right.spawn(FastAnt)
+                self.bug_spawner_bottom_left.spawn(FastAnt, "6")
+                self.bug_spawner_bottom_right.spawn(FastAnt, "7")
+
+        self.cutscene.pause(3)
+        self.cutscene.add_custom_coroutine(self.show_wave_banner())
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("Bugs approaching from the North!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c1())
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("More bugs from the South!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c2())
+
+        self.cutscene.show_text_box()
+        self.cutscene.text("They're making a final assault!\nProtect the apple!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c3())
+
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
         self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()

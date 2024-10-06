@@ -26,7 +26,7 @@ class StartGameButton(Entity):
 
     def on_click(self) -> None:
         from scenes.main_scene import MainScene
-        scene = MainScene(is_tutorial=False)
+        scene = MainScene(is_tutorial=False, is_test=False)
         Engine.load_scene(scene)
 
     def draw(self, camera: Camera) -> None:

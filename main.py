@@ -5,7 +5,6 @@ import sys
 from potion import *
 
 from scenes.start_screen import StartScreen
-from scenes.main_scene import MainScene
 
 
 def main() -> int:
@@ -16,8 +15,7 @@ def main() -> int:
     Renderer.init_default()
 
     # Start the first scene
-    # scene = StartScreen()
-    scene = MainScene(is_tutorial=False, is_test=False)
+    scene = StartScreen()
     Engine.start(scene)
     return 0
 
