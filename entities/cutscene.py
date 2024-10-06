@@ -21,7 +21,14 @@ class Cutscene(Entity):
         self._camera_controller: CameraController | None = None
         self._screen_fade: ScreenFade | None = None
 
+        self._cutscene_coroutine: Generator | None = None
         self._coroutines = []
+
+    def is_running(self) -> bool:
+        if self._cutscene_coroutine:
+            return True
+        else:
+            return False
 
     def start(self) -> None:
         self._text_box = self.find("TextBox")
@@ -124,10 +131,41 @@ class Cutscene(Entity):
             Log.error(f"Can't start cutscene, there are no coroutines")
             return
 
+        if self._cutscene_coroutine:
+            Log.error("Can't start cutscene, there is already one running")
+            return
+
         def _cutscene_coroutine() -> Generator:
             for coroutine in self._coroutines:
                 yield from coroutine
 
             self._coroutines.clear()
+            self._cutscene_coroutine = None
 
-        start_coroutine(_cutscene_coroutine())
+        self._cutscene_coroutine = _cutscene_coroutine()
+        start_coroutine(self._cutscene_coroutine)
+
+    def stop_cutscene(self) -> None:
+        if self._cutscene_coroutine:
+            stop_coroutine(self._cutscene_coroutine)
+            self._coroutines.clear()
+            self._cutscene_coroutine = None
+            self._reset_everything()
+        else:
+            Log.error("There is no cutscene running")
+
+    def _reset_everything(self) -> None:
+        # Hide text box
+        self._text_box.hide()
+        self._text_box.text.text = ""
+        self._text_box.text.visible_characters = 0
+
+        # Camera follow player
+        self._camera_controller.target_point = None
+
+        # Enable player
+        self._player.can_control = True
+
+        # Hide the screen fade
+        self._screen_fade.opacity = 0
+        self._screen_fade.visible = False

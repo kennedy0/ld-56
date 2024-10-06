@@ -30,6 +30,10 @@ class GameManager(Entity):
         # Current bugs in on the map
         self.bugs: list[Bug] = []
 
+        # Game state
+        self.game_over = False
+        self.wave = -1
+
         # Tutorial
         self.tutorial_bug: Bug | None = None
         self.tutorial_focus_point: Point | None = None
@@ -45,9 +49,17 @@ class GameManager(Entity):
         self.bug_spawner_bottom_right = self.find("BugSpawnerBottomRight")
 
     def update(self) -> None:
+        # Check for game over
+        if self.apple.hp <= 0 and not self.game_over:
+            self.game_over = True
+            self.start_defeat()
+            return
+
         if __debug__:
             if Keyboard.get_key_down(Keyboard.RETURN):
                 self.start_tutorial()
+            if Keyboard.get_key_down(Keyboard.ESCAPE):
+                self.cutscene.stop_cutscene()
             if Keyboard.get_key_down(Keyboard.NUM_1):
                 self.start_wave_1()
             if Keyboard.get_key_down(Keyboard.NUM_2):
@@ -104,6 +116,7 @@ class GameManager(Entity):
 
         # End tutorial
         self.cutscene.show_text_box()
+        self.cutscene.disable_player()
         self.cutscene.text("That's all for now soldier.")
         self.cutscene.text("Bring the buggy back to the garage\nfor a tune-up.")
         self.cutscene.hide_text_box()
@@ -171,3 +184,17 @@ class GameManager(Entity):
         Log.debug("START Wave 2")
         bugs = ["ant"] * 10
         self.bug_spawner_top_right.spawn(bugs)
+
+    def start_defeat(self) -> None:
+        if self.cutscene.is_running():
+            self.cutscene.stop_cutscene()
+
+        self.cutscene.disable_player()
+        self.cutscene.move_camera_to_position(Point(400, 200))
+        self.cutscene.show_text_box()
+        self.cutscene.text("It's over...")
+        self.cutscene.text("Abort mission.")
+        self.cutscene.hide_text_box()
+        self.cutscene.fade_out()
+        self.cutscene.load_start_screen()
+        self.cutscene.start_cutscene()
