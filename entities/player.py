@@ -32,6 +32,7 @@ class Player(Entity):
             s.pivot.set_center()
 
         # Movement
+        self.can_control = True
         self.move_input = False
         self.move_input_timer = 0
         self.move_direction = Vector2.zero()
@@ -115,6 +116,10 @@ class Player(Entity):
         self.zsort()
 
     def update_move_input(self) -> None:
+        if not self.can_control:
+            self.move_input = False
+            return
+
         if Mouse.get_left_mouse():
             self.move_input = True
         else:
