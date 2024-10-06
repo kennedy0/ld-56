@@ -1,10 +1,18 @@
+from __future__ import annotations
+
 from potion import *
+
+if TYPE_CHECKING:
+    from entities.apple_ui import AppleUI
 
 
 class Apple(Entity):
     def __init__(self) -> None:
         super().__init__()
         self.name = "Apple"
+
+        # Entity references
+        self.apple_ui: AppleUI | None = None
 
         # Collision
         self.solid = True
@@ -32,12 +40,23 @@ class Apple(Entity):
             
         # HP
         self.max_hp = 100
-        self.hp = 100
+        self._hp = 100
+
+    @property
+    def hp(self) -> int:
+        return self._hp
+
+    @hp.setter
+    def hp(self, value: int) -> None:
+        self._hp = value
+        self.apple_ui.flash()
 
     def bbox(self) -> Rect:
         return Rect(self.x - self.width // 2, self.y - self.height // 2, self.width, self.height)
 
     def start(self) -> None:
+        self.apple_ui = self.find("AppleUI")
+
         self.x = 400
         self.y = 200
         self.z = self.y * -1
