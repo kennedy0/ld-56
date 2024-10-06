@@ -4,6 +4,7 @@ from entities.apple import Apple
 from entities.bg import Bg
 from entities.bug_spawner import BugSpawner
 from entities.camera_controller import CameraController
+from entities.cutscene import Cutscene
 from entities.game_manager import GameManager
 from entities.player import Player
 from entities.rock import Rock
@@ -18,6 +19,7 @@ class MainScene(Scene):
     def load_entities(self) -> None:
         self.entities.add(GameManager())
         self.entities.add(CameraController())
+        self.entities.add(Cutscene())
         self.entities.add(Bg())
         self.entities.add(Apple())
         self.entities.add(Player())

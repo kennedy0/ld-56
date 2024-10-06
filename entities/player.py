@@ -98,6 +98,9 @@ class Player(Entity):
         self.x = 400
         self.y = 100
 
+        self.scene.main_camera.x = self.x - 160
+        self.scene.main_camera.y = self.y - 90
+
     def bbox(self) -> Rect:
         return Rect(self.x - self.width // 2, self.y - self.height // 2, self.width, self.height)
 

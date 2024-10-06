@@ -45,9 +45,6 @@ class Apple(Entity):
     def update(self) -> None:
         perc = self.hp / self.max_hp
 
-        if Keyboard.get_key(Keyboard.SPACE):
-            self.hp -= 1
-
         if perc > .9:
             self.sprite = self.sprites[0]
         elif perc > .8:
