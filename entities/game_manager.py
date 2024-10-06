@@ -1,11 +1,13 @@
 from __future__ import annotations
 import math
 
-from entities.ladybug import Ladybug
 from potion import *
 
 from entities.ant import Ant
 from entities.grasshopper import Grasshopper
+from entities.ladybug import Ladybug
+from entities.fast_ant import FastAnt
+
 
 if TYPE_CHECKING:
     from entities.apple import Apple
@@ -287,20 +289,22 @@ class GameManager(Entity):
         self.cutscene.start_cutscene()
 
     def start_wave_4(self) -> None:
-        def _c() -> Generator:
-            # 10 Ants, BottomRight
+        def _c1() -> Generator:
+            for i in range(10):
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
+                yield from wait_for_seconds(1)
+
             for i in range(10):
                 self.bug_spawner_bottom_right.spawn(Ant, "9")
                 yield from wait_for_seconds(1)
 
-            # 10 Ants, BottomRight
             for i in range(10):
-                self.bug_spawner_bottom_right.spawn(Ant, "8")
+                self.bug_spawner_bottom_right.spawn(Grasshopper, "8")
                 yield from wait_for_seconds(1)
 
-            # 10 Ants, BottomRight
+        def _c2() -> Generator:
             for i in range(10):
-                self.bug_spawner_bottom_right.spawn(Ant, "7")
+                self.bug_spawner_top_right.spawn(Ladybug)
                 yield from wait_for_seconds(1)
 
         self.cutscene.pause(3)
@@ -308,7 +312,12 @@ class GameManager(Entity):
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from South-East!")
         self.cutscene.hide_text_box()
-        self.cutscene.add_custom_coroutine(_c())
+        self.cutscene.add_custom_coroutine(_c1())
+        self.cutscene.pause(20)
+        self.cutscene.show_text_box()
+        self.cutscene.text("More bugs coming from North-East!")
+        self.cutscene.hide_text_box()
+        self.cutscene.add_custom_coroutine(_c2())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
         self.cutscene.add_custom_coroutine(self.end_wave())
         self.cutscene.start_cutscene()
@@ -324,7 +333,7 @@ class GameManager(Entity):
                 lane = waypoints[waypoint_index]
 
                 # Spawn bug
-                self.bug_spawner_bottom_left.spawn(Ant, lane)
+                self.bug_spawner_bottom_left.spawn(FastAnt, lane)
                 yield from wait_for_seconds(1)
 
                 # Advance index
@@ -336,6 +345,7 @@ class GameManager(Entity):
         self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from South-West!")
+        self.cutscene.text("Look out, these guys are quick!")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
