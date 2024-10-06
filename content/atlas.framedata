@@ -81,8 +81,8 @@
   },
   "ant.0005": {
     "name": "ant.0005",
-    "x": 227,
-    "y": 400,
+    "x": 36,
+    "y": 440,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -121,8 +121,8 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 261,
-    "y": 400,
+    "x": 70,
+    "y": 440,
     "frame_width": 18,
     "frame_height": 11,
     "offset_x": 2,
@@ -159,8 +159,8 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 245,
-    "y": 400,
+    "x": 54,
+    "y": 440,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -177,7 +177,7 @@
   },
   "apple.0001": {
     "name": "apple.0001",
-    "x": 0,
+    "x": 36,
     "y": 400,
     "frame_width": 40,
     "frame_height": 40,
@@ -195,7 +195,7 @@
   },
   "apple.0002": {
     "name": "apple.0002",
-    "x": 40,
+    "x": 76,
     "y": 400,
     "frame_width": 39,
     "frame_height": 40,
@@ -213,7 +213,7 @@
   },
   "apple.0003": {
     "name": "apple.0003",
-    "x": 79,
+    "x": 115,
     "y": 400,
     "frame_width": 39,
     "frame_height": 40,
@@ -231,7 +231,7 @@
   },
   "apple.0004": {
     "name": "apple.0004",
-    "x": 118,
+    "x": 154,
     "y": 400,
     "frame_width": 39,
     "frame_height": 40,
@@ -249,7 +249,7 @@
   },
   "apple.0005": {
     "name": "apple.0005",
-    "x": 157,
+    "x": 193,
     "y": 400,
     "frame_width": 35,
     "frame_height": 40,
@@ -267,7 +267,7 @@
   },
   "apple.0006": {
     "name": "apple.0006",
-    "x": 192,
+    "x": 228,
     "y": 400,
     "frame_width": 35,
     "frame_height": 40,
@@ -515,6 +515,24 @@
       "tags": [],
       "duration": 100,
       "frame_number": 8
+    }
+  },
+  "radio.0001": {
+    "name": "radio.0001",
+    "x": 0,
+    "y": 400,
+    "frame_width": 36,
+    "frame_height": 62,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 36,
+    "sprite_height": 62,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "radio",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
     }
   },
   "rock_a.0001": {

@@ -7,6 +7,7 @@ from entities.camera_controller import CameraController
 from entities.game_manager import GameManager
 from entities.player import Player
 from entities.rock import Rock
+from entities.text_box import TextBox
 
 
 class MainScene(Scene):
@@ -20,6 +21,7 @@ class MainScene(Scene):
         self.entities.add(Bg())
         self.entities.add(Apple())
         self.entities.add(Player())
+        self.entities.add(TextBox())
 
         # Create bug spawners
         bug_spawner_top_left = BugSpawner()
