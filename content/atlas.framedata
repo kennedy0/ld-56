@@ -1,8 +1,8 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 809,
-    "y": 485,
+    "x": 753,
+    "y": 537,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -21,7 +21,7 @@
   },
   "ant.0002": {
     "name": "ant.0002",
-    "x": 736,
+    "x": 771,
     "y": 537,
     "frame_width": 18,
     "frame_height": 12,
@@ -41,7 +41,7 @@
   },
   "ant.0003": {
     "name": "ant.0003",
-    "x": 754,
+    "x": 789,
     "y": 537,
     "frame_width": 18,
     "frame_height": 12,
@@ -61,7 +61,7 @@
   },
   "ant.0004": {
     "name": "ant.0004",
-    "x": 772,
+    "x": 807,
     "y": 537,
     "frame_width": 18,
     "frame_height": 12,
@@ -81,8 +81,8 @@
   },
   "ant.0005": {
     "name": "ant.0005",
-    "x": 790,
-    "y": 537,
+    "x": 356,
+    "y": 450,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -121,7 +121,7 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 368,
+    "x": 535,
     "y": 450,
     "frame_width": 18,
     "frame_height": 11,
@@ -159,8 +159,8 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 808,
-    "y": 537,
+    "x": 374,
+    "y": 450,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -357,7 +357,7 @@
   },
   "apple_ui.0001": {
     "name": "apple_ui.0001",
-    "x": 356,
+    "x": 390,
     "y": 450,
     "frame_width": 12,
     "frame_height": 12,
@@ -393,8 +393,8 @@
   },
   "bug_ui.0001": {
     "name": "bug_ui.0001",
-    "x": 818,
-    "y": 512,
+    "x": 809,
+    "y": 485,
     "frame_width": 12,
     "frame_height": 13,
     "offset_x": 0,
@@ -407,6 +407,204 @@
       "tags": [],
       "duration": 100,
       "frame_number": 1
+    }
+  },
+  "grashopper_splat.0001": {
+    "name": "grashopper_splat.0001",
+    "x": 402,
+    "y": 450,
+    "frame_width": 16,
+    "frame_height": 12,
+    "offset_x": 2,
+    "offset_y": 2,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grashopper_splat",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "grasshopper.0001": {
+    "name": "grasshopper.0001",
+    "x": 418,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Idle"
+      ],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "grasshopper.0002": {
+    "name": "grasshopper.0002",
+    "x": 435,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "grasshopper.0003": {
+    "name": "grasshopper.0003",
+    "x": 452,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "grasshopper.0004": {
+    "name": "grasshopper.0004",
+    "x": 469,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "grasshopper.0005": {
+    "name": "grasshopper.0005",
+    "x": 486,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Run"
+      ],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "grasshopper.0006": {
+    "name": "grasshopper.0006",
+    "x": 818,
+    "y": 512,
+    "frame_width": 14,
+    "frame_height": 16,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 6
+    }
+  },
+  "grasshopper.0007": {
+    "name": "grasshopper.0007",
+    "x": 503,
+    "y": 450,
+    "frame_width": 15,
+    "frame_height": 12,
+    "offset_x": 3,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Attack"
+      ],
+      "duration": 200,
+      "frame_number": 7
+    }
+  },
+  "grasshopper.0008": {
+    "name": "grasshopper.0008",
+    "x": 672,
+    "y": 537,
+    "frame_width": 17,
+    "frame_height": 16,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Fly"
+      ],
+      "duration": 100,
+      "frame_number": 8
+    }
+  },
+  "grasshopper.0009": {
+    "name": "grasshopper.0009",
+    "x": 518,
+    "y": 450,
+    "frame_width": 17,
+    "frame_height": 12,
+    "offset_x": 0,
+    "offset_y": 4,
+    "sprite_width": 20,
+    "sprite_height": 16,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "grasshopper",
+      "tags": [
+        "Fly"
+      ],
+      "duration": 100,
+      "frame_number": 9
     }
   },
   "player.0001": {
@@ -573,7 +771,7 @@
   },
   "rock_a.0001": {
     "name": "rock_a.0001",
-    "x": 672,
+    "x": 689,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -591,7 +789,7 @@
   },
   "rock_b.0001": {
     "name": "rock_b.0001",
-    "x": 704,
+    "x": 721,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,
@@ -627,7 +825,7 @@
   },
   "rock_d.0001": {
     "name": "rock_d.0001",
-    "x": 688,
+    "x": 705,
     "y": 537,
     "frame_width": 16,
     "frame_height": 16,
@@ -645,7 +843,7 @@
   },
   "rock_e.0001": {
     "name": "rock_e.0001",
-    "x": 720,
+    "x": 737,
     "y": 537,
     "frame_width": 16,
     "frame_height": 14,

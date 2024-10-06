@@ -17,7 +17,7 @@ def main() -> int:
 
     # Start the first scene
     # scene = StartScreen()
-    scene = MainScene(is_tutorial=False)
+    scene = MainScene(is_tutorial=False, is_test=False)
     Engine.start(scene)
     return 0
 

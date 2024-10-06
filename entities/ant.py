@@ -7,7 +7,7 @@ class Ant(Bug):
     def __init__(self) -> None:
         super().__init__()
 
-        self.move_speed = 5
+        self.move_speed = 1
 
         # Sprite
         self.sprite = AnimatedSprite.from_atlas("atlas.png", "ant")

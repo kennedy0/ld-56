@@ -5,6 +5,7 @@ import random
 from potion import *
 
 from entities.ant_splat import AntSplat
+from models.sound_bank import SoundBank
 
 if TYPE_CHECKING:
     from entities.apple import Apple
@@ -20,8 +21,10 @@ class Bug(Entity):
         self.game_manager: GameManager | None = None
 
         # Sprite
+        self.sprite_offset = Point.zero()
         self.sprite = AnimatedSprite.empty()
         self.shadow_sprite = Sprite.empty()
+        self.splat = AntSplat
 
         # Movement
         self.move_frame = 0
@@ -49,6 +52,7 @@ class Bug(Entity):
 
         # Death
         self.dead = False
+        self.squish_sfx = SoundBank("sfx/squish")
 
     def start(self) -> None:
         self.apple = self.find("Apple")
@@ -207,14 +211,15 @@ class Bug(Entity):
         self.dead = True
         self.game_manager.bugs.remove(self)
         self.destroy()
+        self.squish_sfx.play()
 
-        ant_splat = AntSplat()
-        ant_splat.set_position(self.position())
-        self.scene.entities.add(ant_splat)
+        splat = self.splat()
+        splat.set_position(self.position())
+        self.scene.entities.add(splat)
 
     def draw(self, camera: Camera) -> None:
         self.shadow_sprite.draw(camera, self.position())
-        self.sprite.draw(camera, self.position())
+        self.sprite.draw(camera, self.position() + self.sprite_offset)
 
     def debug_draw(self, camera: Camera) -> None:
         if self.move_target:

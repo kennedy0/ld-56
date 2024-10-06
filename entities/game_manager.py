@@ -4,6 +4,7 @@ import math
 from potion import *
 
 from entities.ant import Ant
+from entities.grasshopper import Grasshopper
 
 if TYPE_CHECKING:
     from entities.apple import Apple
@@ -48,6 +49,7 @@ class GameManager(Entity):
         self.wave_ended = False
 
         # Tutorial
+        self.is_test = False
         self.is_tutorial = False
         self.game_started = False
         self.tutorial_bug: Bug | None = None
@@ -85,6 +87,9 @@ class GameManager(Entity):
                 self.start_wave_3()
             if Keyboard.get_key_down(Keyboard.NUM_4):
                 self.start_wave_4()
+
+        if self.is_test:
+            return
 
         # Start the game
         if not self.game_started:
@@ -247,6 +252,7 @@ class GameManager(Entity):
         self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from North-West!")
+        self.cutscene.text("Ants: slow and weak.\nShouldn't be a problem.")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())
@@ -257,15 +263,16 @@ class GameManager(Entity):
         Log.debug("START Wave 2")
 
         def _c() -> Generator:
-            # 10 Ants, TopRight
+            # 10 Grasshoppers, TopRight
             for i in range(10):
-                self.bug_spawner_top_right.spawn(Ant)
+                self.bug_spawner_top_right.spawn(Grasshopper)
                 yield from wait_for_seconds(1)
 
         self.cutscene.pause(3)
         self.cutscene.add_custom_coroutine(self.show_wave_banner())
         self.cutscene.show_text_box()
         self.cutscene.text("Bugs approaching from North-East!")
+        self.cutscene.text("Grasshoppers: tricky little things.\nRun 'em over before they jump.")
         self.cutscene.hide_text_box()
         self.cutscene.add_custom_coroutine(_c())
         self.cutscene.add_custom_coroutine(self.wait_for_wave_to_finish())

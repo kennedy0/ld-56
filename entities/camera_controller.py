@@ -45,7 +45,7 @@ class CameraController(Entity):
 
     def in_range_of_target(self) -> bool:
         if self.target_point:
-            if self.scene.main_camera.center().distance_to(self.target_point.to_vector2()) < 2:
+            if self.scene.main_camera.center().distance_to(self.target_point.to_vector2()) < 4:
                 return True
 
         return False

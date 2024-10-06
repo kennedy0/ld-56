@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from potion import *
 
+from models.sound_bank import SoundBank
+
 if TYPE_CHECKING :
     from entities.camera_controller import CameraController
     from entities.player import Player
@@ -23,6 +25,8 @@ class Cutscene(Entity):
 
         self._cutscene_coroutine: Generator | None = None
         self._coroutines = []
+
+        self._sfx = SoundBank("sfx/talk")
 
     def is_running(self) -> bool:
         if self._cutscene_coroutine:
@@ -51,7 +55,7 @@ class Cutscene(Entity):
 
     def text(self, text: str) -> None:
         """ Show text in the text box. """
-        delay_frames = 3
+        delay_frames = 2
 
         def _c() -> Generator:
             yield from wait_for_seconds(.5)
@@ -60,6 +64,8 @@ class Cutscene(Entity):
             while self._text_box.text.visible_characters < len(text):
                 if Engine.frame() % delay_frames == 0:
                     self._text_box.text.visible_characters += 1
+                    if self._text_box.text.visible_characters % 3 == 0:
+                        self._sfx.play()
                 yield
 
             yield from wait_for_seconds(1.5)

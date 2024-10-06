@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from math import atan2, degrees
+from modulefinder import packagePathMap
 
 from potion import *
 
@@ -34,6 +35,7 @@ class Player(Entity):
         # Movement
         self.can_control = True
         self.move_input = False
+        self.boost_input = False
         self.move_input_timer = 0
         self.move_direction = Vector2.zero()
         self.move_speed = 0
@@ -42,6 +44,14 @@ class Player(Entity):
         self.mx = 0
         self.my = 0
         self.facing_angle = 0
+        self.can_boost = False
+        self.is_boosting = False
+        self.boost_started_this_frame = False
+        self.boost_cooldown_timer = 0
+        self.boost_cooldown_timer_max = 3
+        self.boost_duration_timer = 0
+        self.boost_duration_timer_max = .5
+        self.in_water = False
 
         # Collision
         self.collisions_enabled = True
@@ -93,6 +103,15 @@ class Player(Entity):
             Point(244, 370),
         ]
 
+        self.sfx_timer = 0
+        self.sfx_timer_max = .20
+        self.engine_sfx_1 = SoundEffect("sfx/engine1.wav")
+        self.engine_sfx_2 = SoundEffect("sfx/engine2.wav")
+        self.engine_sfx_3 = SoundEffect("sfx/engine3.wav")
+        self.engine_sfx_4 = SoundEffect("sfx/engine4.wav")
+        self.engine_sfx_5 = SoundEffect("sfx/engine5.wav")
+        self.boost_sfx = SoundEffect("sfx/boost")
+
     def start(self) -> None:
         self.game_manager = self.find("GameManager")
 
@@ -107,12 +126,14 @@ class Player(Entity):
 
     def update(self) -> None:
         self.update_move_input()
+        # self.update_boost()
         self.update_move_direction()
         self.update_movement()
         self.update_facing_angle()
         self.handle_bug_collisions()
         self.handle_water_collision()
         self.update_sprite()
+        # self.update_engine_sfx()
         self.zsort()
 
     def update_move_input(self) -> None:
@@ -125,7 +146,43 @@ class Player(Entity):
         else:
             self.move_input = False
 
+    def update_boost(self) -> None:
+        self.boost_started_this_frame = False
+
+        if not self.can_control:
+            self.boost_input = False
+            return
+
+        if Mouse.get_right_mouse_down():
+            self.boost_input = True
+        else:
+            self.boost_input = False
+
+        self.boost_cooldown_timer -= Time.delta_time
+        if self.boost_cooldown_timer < 0:
+            self.boost_cooldown_timer = 0
+            self.can_boost = True
+
+        if self.boost_input and self.can_boost:
+            self.can_boost = False
+            self.boost_started_this_frame = True
+            self.boost_duration_timer = self.boost_duration_timer_max
+            self.boost_cooldown_timer = self.boost_cooldown_timer_max
+
+        self.boost_duration_timer -= Time.delta_time
+        if self.boost_duration_timer < 0:
+            self.boost_duration_timer = 0
+
+        if self.boost_duration_timer > 0:
+            self.is_boosting = True
+        else:
+            self.is_boosting = False
+
+
     def update_move_direction(self) -> None:
+        if self.boost_input:
+            return
+
         if self.move_input:
             delta = (Mouse.world_position() - self.position()).to_vector2().normalized()
             self.move_direction = delta
@@ -139,6 +196,8 @@ class Player(Entity):
 
         # Clamp move speed
         self.move_speed = pmath.clamp(self.move_speed, 0, self.max_move_speed)
+        if self.in_water:
+            self.move_speed *= .95
 
         # Get movement amount
         self.mx = self.move_direction.x * self.move_speed
@@ -161,15 +220,16 @@ class Player(Entity):
 
     def handle_water_collision(self) -> None:
         player_p = self.position()
+        self.in_water = False
 
         if self.water_rect.contains_point(player_p):
             distances = [p.distance_to(player_p) for p in self.water_points]
             if min(distances) < self.water_radius:
-                print("WATER")
+                self.in_water = True
         elif self.water_rect_2.contains_point(player_p):
             distances = [p.distance_to(player_p) for p in self.water_points_2]
             if min(distances) < self.water_radius:
-                print("WATER")
+                self.in_water = True
 
     def update_facing_angle(self) -> None:
         self.facing_angle = degrees(atan2(self.move_direction.y, self.move_direction.x))
@@ -199,6 +259,30 @@ class Player(Entity):
             i = 0
 
         self.sprite = self.sprites[i]
+
+    def update_engine_sfx(self) -> None:
+        self.sfx_timer -= Time.delta_time
+        if self.sfx_timer < 0:
+            self.sfx_timer = self.sfx_timer_max
+
+            speed = Vector2(self.mx, self.my).length()
+            if speed < 1:
+                sfx = self.engine_sfx_1
+                self.sfx_timer_max = .4
+            elif speed < 2:
+                sfx = self.engine_sfx_2
+                self.sfx_timer_max = .3
+            elif speed < 3:
+                sfx = self.engine_sfx_3
+                self.sfx_timer_max = .2
+            elif speed < 4:
+                sfx = self.engine_sfx_4
+                self.sfx_timer_max = .1
+            else:
+                sfx = self.engine_sfx_5
+                self.sfx_timer_max = .1
+
+            sfx.play()
 
     def zsort(self) -> None:
         self.z = self.y * -1

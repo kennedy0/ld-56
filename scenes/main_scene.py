@@ -18,9 +18,10 @@ from entities.wave_banner import WaveBanner
 
 
 class MainScene(Scene):
-    def __init__(self, is_tutorial: bool) -> None:
+    def __init__(self, is_tutorial: bool, is_test: bool) -> None:
         super().__init__()
         self.is_tutorial = is_tutorial
+        self.is_test = is_test
 
     def setup_cameras(self) -> None:
         self.main_camera.x = 400 - (self.main_camera.resolution[0] / 2)
@@ -28,6 +29,7 @@ class MainScene(Scene):
 
     def load_entities(self) -> None:
         game_manager = GameManager()
+        game_manager.is_test = self.is_test
         game_manager.is_tutorial = self.is_tutorial
         self.entities.add(game_manager)
 
