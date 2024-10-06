@@ -9,7 +9,9 @@ if TYPE_CHECKING:
     from entities.bug_spawner import BugSpawner
     from entities.camera_controller import CameraController
     from entities.cutscene import Cutscene
+    from entities.defeat_screen import DefeatScreen
     from entities.player import Player
+    from entities.victory_screen import VictoryScreen
 
 
 class GameManager(Entity):
@@ -21,7 +23,10 @@ class GameManager(Entity):
         self.apple: Apple | None = None
         self.camera_controller: CameraController | None = None
         self.cutscene: Cutscene | None = None
+        self.defeat_screen: DefeatScreen | None = None
         self.player: Player | None = None
+        self.victory_screen: VictoryScreen | None = None
+
         self.bug_spawner_top_left: BugSpawner | None = None
         self.bug_spawner_top_right: BugSpawner | None = None
         self.bug_spawner_bottom_left: BugSpawner | None = None
@@ -33,8 +38,11 @@ class GameManager(Entity):
         # Game state
         self.game_over = False
         self.wave = -1
+        self.total_waves = 5
 
         # Tutorial
+        self.is_tutorial = False
+        self.game_started = False
         self.tutorial_bug: Bug | None = None
         self.tutorial_focus_point: Point | None = None
 
@@ -42,13 +50,23 @@ class GameManager(Entity):
         self.apple = self.find("Apple")
         self.camera_controller = self.find("CameraController")
         self.cutscene = self.find("Cutscene")
+        self.defeat_screen = self.find("DefeatScreen")
         self.player = self.find("Player")
+        self.victory_screen = self.find("VictoryScreen")
+
         self.bug_spawner_top_left = self.find("BugSpawnerTopLeft")
         self.bug_spawner_top_right = self.find("BugSpawnerTopRight")
         self.bug_spawner_bottom_left = self.find("BugSpawnerBottomLeft")
         self.bug_spawner_bottom_right = self.find("BugSpawnerBottomRight")
 
     def update(self) -> None:
+        if not self.game_started:
+            self.game_started = True
+            if self.is_tutorial:
+                self.start_tutorial()
+            else:
+                self.start_game()
+
         # Check for game over
         if self.apple.hp <= 0 and not self.game_over:
             self.game_over = True
@@ -56,19 +74,18 @@ class GameManager(Entity):
             return
 
         if __debug__:
-            if Keyboard.get_key_down(Keyboard.RETURN):
-                self.start_tutorial()
-            if Keyboard.get_key_down(Keyboard.ESCAPE):
-                self.cutscene.stop_cutscene()
             if Keyboard.get_key_down(Keyboard.NUM_1):
                 self.start_wave_1()
             if Keyboard.get_key_down(Keyboard.NUM_2):
                 self.start_wave_2()
 
+    def start_game(self) -> None:
+        Log.debug("START GAME")
+
     def start_tutorial(self) -> None:
         Log.debug("START TUTORIAL")
 
-        # self.cutscene.pause(3)
+        self.cutscene.pause(3)
 
         self.cutscene.show_text_box()
         self.cutscene.text("Hello...\nIs this thing on?")
@@ -76,7 +93,7 @@ class GameManager(Entity):
         self.cutscene.text("Okay soldier, listen up.\nSee that apple over there?")
         self.cutscene.disable_player()
         self.cutscene.move_camera_to_position(Point(400, 200))
-        self.cutscene.text("The bugs are about to be all over it.\nWe can't let that happen.")
+        self.cutscene.text("The bugs are gonna be all over it.\nWe can't let that happen.")
         self.cutscene.text("It'll ruin my picnic...!")
         self.cutscene.pause(.5)
         self.cutscene.text("*Cough*")
@@ -167,10 +184,6 @@ class GameManager(Entity):
 
     def _tutorial_wait_for_bug_to_die(self) -> Generator:
         while not self.tutorial_bug.dead:
-            # Keep the apple alive no matter what
-            if self.apple.hp <= 1:
-                self.apple.hp = 1
-
             yield
 
         self.cutscene.pause(.5)
@@ -185,6 +198,25 @@ class GameManager(Entity):
         bugs = ["ant"] * 10
         self.bug_spawner_top_right.spawn(bugs)
 
+    def start_victory(self) -> None:
+        print("ANDREW!!!, need to set `self.game_over = True` when victory condition is confirmed")
+
+        if self.cutscene.is_running():
+            self.cutscene.stop_cutscene()
+
+        self.cutscene.disable_player()
+        self.cutscene.move_camera_to_position(Point(400, 200))
+        self.cutscene.show_text_box()
+        self.cutscene.text("All hostile bugs eradicated.")
+        self.cutscene.text("Great job soldier.")
+        self.cutscene.text("Head back to base;\nit's time to celebrate.")
+        self.cutscene.text("I think you've earned\nme a promotion!")
+        self.cutscene.hide_text_box()
+        self.cutscene.fade_out()
+        self.cutscene.add_custom_coroutine(self.victory_screen.show_victory_screen())
+        self.cutscene.load_start_screen()
+        self.cutscene.start_cutscene()
+
     def start_defeat(self) -> None:
         if self.cutscene.is_running():
             self.cutscene.stop_cutscene()
@@ -196,5 +228,6 @@ class GameManager(Entity):
         self.cutscene.text("Abort mission.")
         self.cutscene.hide_text_box()
         self.cutscene.fade_out()
+        self.cutscene.add_custom_coroutine(self.defeat_screen.show_defeat_screen())
         self.cutscene.load_start_screen()
         self.cutscene.start_cutscene()

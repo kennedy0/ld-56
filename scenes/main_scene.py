@@ -5,20 +5,29 @@ from entities.bg import Bg
 from entities.bug_spawner import BugSpawner
 from entities.camera_controller import CameraController
 from entities.cutscene import Cutscene
+from entities.defeat_screen import DefeatScreen
 from entities.game_manager import GameManager
 from entities.player import Player
 from entities.rock import Rock
 from entities.screen_fade import ScreenFade
 from entities.text_box import TextBox
+from entities.victory_screen import VictoryScreen
 
 
 class MainScene(Scene):
+    def __init__(self, is_tutorial: bool) -> None:
+        super().__init__()
+        self.is_tutorial = is_tutorial
+
     def setup_cameras(self) -> None:
         self.main_camera.x = 400 - (self.main_camera.resolution[0] / 2)
         self.main_camera.y = 200 - (self.main_camera.resolution[1] / 2)
 
     def load_entities(self) -> None:
-        self.entities.add(GameManager())
+        game_manager = GameManager()
+        game_manager.is_tutorial = self.is_tutorial
+        self.entities.add(game_manager)
+
         self.entities.add(CameraController())
         self.entities.add(Cutscene())
         self.entities.add(Bg())
@@ -26,6 +35,8 @@ class MainScene(Scene):
         self.entities.add(Player())
         self.entities.add(TextBox())
         self.entities.add(ScreenFade())
+        self.entities.add(VictoryScreen())
+        self.entities.add(DefeatScreen())
 
         # Create bug spawners
         bug_spawner_top_left = BugSpawner()
