@@ -1,8 +1,8 @@
 {
   "ant.0001": {
     "name": "ant.0001",
-    "x": 800,
-    "y": 224,
+    "x": 814,
+    "y": 143,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -22,7 +22,7 @@
   "ant.0002": {
     "name": "ant.0002",
     "x": 800,
-    "y": 236,
+    "y": 364,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -42,7 +42,7 @@
   "ant.0003": {
     "name": "ant.0003",
     "x": 800,
-    "y": 248,
+    "y": 376,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -62,7 +62,7 @@
   "ant.0004": {
     "name": "ant.0004",
     "x": 800,
-    "y": 260,
+    "y": 388,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -81,8 +81,8 @@
   },
   "ant.0005": {
     "name": "ant.0005",
-    "x": 800,
-    "y": 272,
+    "x": 227,
+    "y": 400,
     "frame_width": 18,
     "frame_height": 12,
     "offset_x": 1,
@@ -101,8 +101,8 @@
   },
   "ant.0006": {
     "name": "ant.0006",
-    "x": 800,
-    "y": 178,
+    "x": 816,
+    "y": 317,
     "frame_width": 16,
     "frame_height": 16,
     "offset_x": 0,
@@ -121,8 +121,8 @@
   },
   "ant.0007": {
     "name": "ant.0007",
-    "x": 800,
-    "y": 284,
+    "x": 261,
+    "y": 400,
     "frame_width": 18,
     "frame_height": 11,
     "offset_x": 2,
@@ -141,8 +141,8 @@
   },
   "ant_shadow.0001": {
     "name": "ant_shadow.0001",
-    "x": 800,
-    "y": 295,
+    "x": 814,
+    "y": 246,
     "frame_width": 16,
     "frame_height": 3,
     "offset_x": 0,
@@ -159,8 +159,8 @@
   },
   "ant_splat.0001": {
     "name": "ant_splat.0001",
-    "x": 816,
-    "y": 210,
+    "x": 245,
+    "y": 400,
     "frame_width": 16,
     "frame_height": 12,
     "offset_x": 2,
@@ -173,6 +173,186 @@
       "tags": [],
       "duration": 100,
       "frame_number": 1
+    }
+  },
+  "apple.0001": {
+    "name": "apple.0001",
+    "x": 0,
+    "y": 400,
+    "frame_width": 40,
+    "frame_height": 40,
+    "offset_x": 0,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 1
+    }
+  },
+  "apple.0002": {
+    "name": "apple.0002",
+    "x": 40,
+    "y": 400,
+    "frame_width": 39,
+    "frame_height": 40,
+    "offset_x": 1,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 2
+    }
+  },
+  "apple.0003": {
+    "name": "apple.0003",
+    "x": 79,
+    "y": 400,
+    "frame_width": 39,
+    "frame_height": 40,
+    "offset_x": 1,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 3
+    }
+  },
+  "apple.0004": {
+    "name": "apple.0004",
+    "x": 118,
+    "y": 400,
+    "frame_width": 39,
+    "frame_height": 40,
+    "offset_x": 1,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 4
+    }
+  },
+  "apple.0005": {
+    "name": "apple.0005",
+    "x": 157,
+    "y": 400,
+    "frame_width": 35,
+    "frame_height": 40,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 5
+    }
+  },
+  "apple.0006": {
+    "name": "apple.0006",
+    "x": 192,
+    "y": 400,
+    "frame_width": 35,
+    "frame_height": 40,
+    "offset_x": 2,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 6
+    }
+  },
+  "apple.0007": {
+    "name": "apple.0007",
+    "x": 800,
+    "y": 0,
+    "frame_width": 31,
+    "frame_height": 40,
+    "offset_x": 5,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 7
+    }
+  },
+  "apple.0008": {
+    "name": "apple.0008",
+    "x": 800,
+    "y": 40,
+    "frame_width": 27,
+    "frame_height": 40,
+    "offset_x": 8,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 8
+    }
+  },
+  "apple.0009": {
+    "name": "apple.0009",
+    "x": 800,
+    "y": 80,
+    "frame_width": 23,
+    "frame_height": 40,
+    "offset_x": 10,
+    "offset_y": 0,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 9
+    }
+  },
+  "apple.0010": {
+    "name": "apple.0010",
+    "x": 800,
+    "y": 120,
+    "frame_width": 14,
+    "frame_height": 36,
+    "offset_x": 18,
+    "offset_y": 1,
+    "sprite_width": 40,
+    "sprite_height": 63,
+    "metadata": {
+      "source_format": "aseprite",
+      "sprite_name": "apple",
+      "tags": [],
+      "duration": 100,
+      "frame_number": 10
     }
   },
   "bg.0001": {
@@ -196,7 +376,7 @@
   "player.0001": {
     "name": "player.0001",
     "x": 800,
-    "y": 119,
+    "y": 275,
     "frame_width": 22,
     "frame_height": 21,
     "offset_x": 9,
@@ -214,7 +394,7 @@
   "player.0002": {
     "name": "player.0002",
     "x": 800,
-    "y": 0,
+    "y": 156,
     "frame_width": 26,
     "frame_height": 25,
     "offset_x": 7,
@@ -231,8 +411,8 @@
   },
   "player.0003": {
     "name": "player.0003",
-    "x": 800,
-    "y": 50,
+    "x": 814,
+    "y": 120,
     "frame_width": 14,
     "frame_height": 23,
     "offset_x": 13,
@@ -250,7 +430,7 @@
   "player.0004": {
     "name": "player.0004",
     "x": 800,
-    "y": 25,
+    "y": 181,
     "frame_width": 26,
     "frame_height": 25,
     "offset_x": 7,
@@ -268,7 +448,7 @@
   "player.0005": {
     "name": "player.0005",
     "x": 800,
-    "y": 140,
+    "y": 296,
     "frame_width": 22,
     "frame_height": 21,
     "offset_x": 9,
@@ -286,7 +466,7 @@
   "player.0006": {
     "name": "player.0006",
     "x": 800,
-    "y": 73,
+    "y": 206,
     "frame_width": 26,
     "frame_height": 23,
     "offset_x": 7,
@@ -303,8 +483,8 @@
   },
   "player.0007": {
     "name": "player.0007",
-    "x": 814,
-    "y": 50,
+    "x": 800,
+    "y": 229,
     "frame_width": 14,
     "frame_height": 23,
     "offset_x": 13,
@@ -322,7 +502,7 @@
   "player.0008": {
     "name": "player.0008",
     "x": 800,
-    "y": 96,
+    "y": 252,
     "frame_width": 26,
     "frame_height": 23,
     "offset_x": 7,
@@ -339,8 +519,8 @@
   },
   "rock_a.0001": {
     "name": "rock_a.0001",
-    "x": 816,
-    "y": 178,
+    "x": 800,
+    "y": 334,
     "frame_width": 16,
     "frame_height": 16,
     "offset_x": 1,
@@ -357,8 +537,8 @@
   },
   "rock_b.0001": {
     "name": "rock_b.0001",
-    "x": 816,
-    "y": 194,
+    "x": 800,
+    "y": 350,
     "frame_width": 16,
     "frame_height": 14,
     "offset_x": 1,
@@ -375,8 +555,8 @@
   },
   "rock_c.0001": {
     "name": "rock_c.0001",
-    "x": 800,
-    "y": 161,
+    "x": 814,
+    "y": 229,
     "frame_width": 16,
     "frame_height": 17,
     "offset_x": 1,
@@ -393,8 +573,8 @@
   },
   "rock_d.0001": {
     "name": "rock_d.0001",
-    "x": 800,
-    "y": 194,
+    "x": 816,
+    "y": 334,
     "frame_width": 16,
     "frame_height": 16,
     "offset_x": 1,
@@ -411,8 +591,8 @@
   },
   "rock_e.0001": {
     "name": "rock_e.0001",
-    "x": 800,
-    "y": 210,
+    "x": 816,
+    "y": 350,
     "frame_width": 16,
     "frame_height": 14,
     "offset_x": 1,
@@ -429,8 +609,8 @@
   },
   "rock_f.0001": {
     "name": "rock_f.0001",
-    "x": 816,
-    "y": 161,
+    "x": 800,
+    "y": 317,
     "frame_width": 16,
     "frame_height": 17,
     "offset_x": 1,

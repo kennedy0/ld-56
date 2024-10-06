@@ -96,7 +96,7 @@ class Player(Entity):
         self.game_manager = self.find("GameManager")
 
         self.x = 400
-        self.y = 200
+        self.y = 100
 
     def bbox(self) -> Rect:
         return Rect(self.x - self.width // 2, self.y - self.height // 2, self.width, self.height)

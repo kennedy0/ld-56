@@ -1,5 +1,6 @@
 from potion import *
 
+from entities.apple import Apple
 from entities.bg import Bg
 from entities.bug_spawner import BugSpawner
 from entities.camera_controller import CameraController
@@ -17,6 +18,7 @@ class MainScene(Scene):
         self.entities.add(GameManager())
         self.entities.add(CameraController())
         self.entities.add(Bg())
+        self.entities.add(Apple())
         self.entities.add(Player())
 
         # Create bug spawners
