@@ -86,7 +86,9 @@ class Cutscene(Entity):
     def move_camera_to_position(self, position: Point) -> None:
         def _c() -> Generator:
             self._camera_controller.target_point = position
-            while not self._camera_controller.in_range_of_target():
+            timer = 6
+            while timer > 0 and not self._camera_controller.in_range_of_target():
+                timer -= Time.delta_time
                 yield
 
         self._coroutines.append(_c())
@@ -94,7 +96,9 @@ class Cutscene(Entity):
     def move_camera_to_player(self) -> None:
         def _c() -> Generator:
             self._camera_controller.target_point = self._player.position()
-            while not self._camera_controller.in_range_of_target():
+            timer = 6
+            while timer > 0 and not self._camera_controller.in_range_of_target():
+                timer -= Time.delta_time
                 yield
             self._camera_controller.target_point = None
             yield
